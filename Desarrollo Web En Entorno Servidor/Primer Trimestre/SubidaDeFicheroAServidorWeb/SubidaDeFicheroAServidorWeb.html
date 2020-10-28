@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+    Realizar el  programa guardarimagenes.php  que muestre un formulario web que permita el envío de uno o dos
+    ficheros de imágenes que se guardarán un directorio llamado imgusers no accesible por web.  Crear el directorio 
+    y darle los permisos adecuados. El programa mostrará el formulario (GET) o lo procesará (POST)
+
+    El programa PHP debe controlar:
+
+    - El tamaño máximo de los ficheros no puede superar los 200 Kbytes cada uno y entre los dos no mas de 300  Kbytes.
+    - Se puede enviar uno o dos ficheros simultáneamente.
+    - Los ficheros tienes que ser o JPG o PNG no se admiten otros formatos.
+    - La aplicación NO  debe permitir subir ficheros cuyo nombres ya exista en el directorio de imágenes.
+
+    Subir la URL con el proyecto subido a vuestra cuenta de GITHUB.
+-->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Subida de Fichero a Servidor Web</title>
+</head>
+
+<style>
+    #box {
+        width: 333px;
+        height: 352px;
+        padding: 58px 76px 0 76px;
+        color: #ebebeb;
+        font: 12px Arial, Helvetica, sans-serif;
+        background: url(styles.png) no-repeat left top;
+        text-align: center;
+    }
+    
+    #box h2 {
+        padding: 0;
+        margin: 0;
+        color: #ebebeb;
+        font: bold 44px "Calibri", Arial;
+    }
+    
+    #box-name {
+        float: left;
+        display: inline;
+        width: 80px;
+        text-align: right;
+        padding: 14px 10px 0 0;
+        margin: 0 0 7px 0;
+    }
+</style>
+
+<body>
+    <center>
+        <div style="padding: 100px 0 0 250px; align-items: center;">
+            <div id="box">
+                <br><br><br>
+                <h2>Subir Imágenes</h2>
+                <br><br><br><br><br><br><br>
+                <form id="SubidaDeFicheroAServidorWeb" enctype="multipart/form-data" method="post" action="guardarimagenes.php">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
+                    <input type="file" name="archivo[]" multiple="multiple">
+                    <input type="submit" value="Enviar" class="trig">
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>

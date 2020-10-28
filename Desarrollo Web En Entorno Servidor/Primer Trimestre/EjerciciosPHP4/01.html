@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+	1-Elaborar programa (01.php) en php que procese un formulario (01.html) que solicita al usuario un nombre y una clave.
+	 El programa php tendrá un array asociativo con 3 pares de valores de usuario => contraseña.  
+	 Se comprobará consultando la tabla si los datos son válidos, en este caso se debe mostrar un mensaje de 
+	 bienvenida con nombre introducido, en otro caso se mostrar un mensaje de error para que usuario pueda volver a 
+	 introducir nuevos datos.
+-->
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1 (4)</title>
+    <link href="login-box.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div style="padding: 100px 0 0 250px;">
+        <div id="login-box">
+            <form name="form01" action="01.php" method="GET" style="text-align: center;">
+                <h2>Comprueba tu usuario</h2>
+                <br>
+                <input name="nombre" type="text" placeholder="Usuario" />
+                <br><br>
+                <input name="contrasenia" type="password" placeholder="Contraseña" />
+                <br><br>
+                <span class="login-box-options"><input type="checkbox" name="1" value="1"> Recordarme <a href="#" style="margin-left:10px;">¿Has olvidado tu contraseña?</a></span>
+                <br><br>
+                <input name="envio" type="submit" value="Comprobar" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

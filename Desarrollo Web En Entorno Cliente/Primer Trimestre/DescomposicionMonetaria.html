@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Descomposición Monetaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    input {
+        font-family: Arial;
+        font-size: 10pt;
+        width: 200px;
+        height: 40px;
+        cursor: pointer
+    }
+</style>
+
+<body>
+    <script language="JavaScript">
+        var Desgloses = new Array(500, 200, 100, 50, 20, 10, 5, 1);
+        importe = -1;
+
+        while (importe < 0) {
+
+            importe = parseInt(prompt("Introduce el importe a descomponer: ", 0));
+
+            if (importe < 0) {
+                alert("<<El importe ha de ser positivo>>");
+            }
+
+        }
+
+        document.write("<center><table border=4>");
+        document.write("<th>DESCOMPOSICIÓN MONETARIA DE: " + importe + " EUROS</th></tr>");
+        document.write("</table>");
+        document.write("<br><br><br>");
+
+
+        document.write("<table border=4>");
+
+        for (i = 0; i < Desgloses.length; i++) {
+            cantidad = Math.floor(importe / Desgloses[i]);
+            importe = importe % Desgloses[i];
+            document.write("<TR align='center'>");
+            Unidades = "Unidades monetarias de " + Desgloses[i] + " : " + cantidad;
+            if (cantidad > 0) {
+                Unidades = ("<B><I>" + Unidades + "</B></I>");
+            }
+            document.write("<TD>" + Unidades + "</TD><TR>");
+        }
+
+        document.write("</table></center>")
+    </script>
+    <br>
+    <center>
+        <table>
+            <input type="button" value="Transferir a Andorra" onclick="location.reload()" />
+        </table>
+    </center>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 <?php
     //Carpeta de destino
     $carpetaDestino="imgusers/";
+    //$carpetaDestino="nuevarutasegura/";
 
     //Checkea el tamaño del archivo para que sea inferior a 300Kb
     if( $_FILES['archivo']['size'] < 300000 ) {

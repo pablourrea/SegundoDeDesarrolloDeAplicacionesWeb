@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+1.-Desarrollar web que permita determinar si un número es par o impar.
+Para ello se partirá de un documento HTML base (cjtexto, botón, etc..).
+Se introducirá un número en caja de texto y al hacer click sobre el botón 
+se llamará a una función llamada par que tendrá como parámetro el número introducido.
+La función generará el informe par o impar de manera óptima en un textarea.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script type="text/javascript">
+        var numero = prompt("Introduce un número entero");
+
+        var resultado = parImpar(numero);
+        alert("El número " + numero + " es " + resultado);
+
+        function parImpar(numero) {
+            if (numero % 2 == 0) {
+                return "par";
+            } else {
+                return "impar";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+2.-Desarrollar web que permita visualizar de entre los primeros 500 número decimales, 
+aquellos que sean primos. Para ello se partirá de un documento HTML base (cjtexto, botón, etc..).
+Se tratará de crear una función llamada “esprimo” que reciba como parámetro el número a estudiar.
+Si es primo se acumulará en un array o en una variable de texto. Finalizado el proceso de estudio 
+se escribirán los primos encontrados en el textarea.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    </head>
+
+    <body>
+        <script languaje="javascript">
+            function primo(num) {
+                var resultado = 1;
+                for (n = num - 1; n > 1; n--) {
+
+                    if (num % n == 0)
+                        resultado = 0;
+                }
+                return resultado;
+
+            }
+
+            num = prompt("Introduce numero", "");
+            result = primo(num);
+
+
+            if (result == 1) {
+                document.write("El numero es primo.");
+            } else if (result == 0) {
+                document.write("El numero no es primo ");
+            }
+        </script>
+    </body>
+
+</html>

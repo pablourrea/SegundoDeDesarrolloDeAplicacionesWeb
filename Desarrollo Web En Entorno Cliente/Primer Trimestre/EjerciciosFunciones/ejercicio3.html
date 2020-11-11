@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+3.-Desarrollar una web que permita dibujar una tabla.
+Crea una función en javascript que permita dibujar una tabla.
+
+Como parámetros se indicarán el número de filas y de columnas 
+con dos números. Por defecto la función generará una tabla de 
+10 filas y 4 columnas.
+
+La tabla se creará con un borde negro de 1pixel entre cada celda, 
+pero un tercer parámetro permite indicar el color (por defecto el 
+color será negro). El borde exteerior medirá 3 pixeles y siempre 
+será del mismo color que el borde de las celdas.
+
+La tabla ocupará toda la anchura de la página.
+
+Usa la función para crear una tabla con borde negro de 10 filas y 4 columnas.
+
+Úsala de nuevo para generar una tabla de 20 filas y 10 columnas, con borde negro.
+
+Finalmente, consigue dibujar 10 tablas de 5 filas y 4 columnas que tengan borde verde.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <input type="button" value="Genera una tabla" onclick="genera_tabla()">
+
+    <script languaje="javascript">
+        function genera_tabla() {
+            // Obtener la referencia del elemento body
+            var body = document.getElementsByTagName("body")[0];
+
+            // Crea un elemento <table> y un elemento <tbody>
+            var tabla = document.createElement("table");
+            var tblBody = document.createElement("tbody");
+
+            // Crea las celdas
+            for (var i = 0; i < 2; i++) {
+                // Crea las hileras de la tabla
+                var hilera = document.createElement("tr");
+
+                for (var j = 0; j < 2; j++) {
+                    // Crea un elemento <td> y un nodo de texto, haz que el nodo de
+                    // texto sea el contenido de <td>, ubica el elemento <td> al final
+                    // de la hilera de la tabla
+                    var celda = document.createElement("td");
+                    var textoCelda = document.createTextNode("celda en la hilera " + i + ", columna " + j);
+                    celda.appendChild(textoCelda);
+                    hilera.appendChild(celda);
+                }
+
+                // agrega la hilera al final de la tabla (al final del elemento tblbody)
+                tblBody.appendChild(hilera);
+            }
+
+            // posiciona el <tbody> debajo del elemento <table>
+            tabla.appendChild(tblBody);
+            // appends <table> into <body>
+            body.appendChild(tabla);
+            // modifica el atributo "border" de la tabla y lo fija a "2";
+            tabla.setAttribute("border", "2");
+        }
+    </script>
+</body>
+
+</html>

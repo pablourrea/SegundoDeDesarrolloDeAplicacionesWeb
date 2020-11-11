@@ -1,0 +1,57 @@
+<!--
+    Actividad: crear varias cookies desde un script PHP y luego recibirlas desde otro.
+    
+    1.Crea script llamado setcookies.php con este contenido:
+
+        <?php
+            setcookie('Fecha',date('Y-m-d H:i:s'));
+            setcookie('preferencias[idioma]','español');
+            setcookie('preferencias[fondo]','rojo');
+        ?>
+    
+
+    2. Crea script llamado vercookies.php con este contenido: 
+
+        <?php
+            var_dump($_COOKIE);
+        ?> 
+    
+        Accede con el navegador a vercookies.php
+
+
+    3.Cierra el navegador, y accede otra vez a vercookies.php. Como las cookies no tenían fecha 
+    de expiración se han borrado la cerrar el navegador.
+
+
+    4. Añade en setcookies.php el código resaltado en negrita a continuación:
+
+        <?php
+            setcookie('Fecha',date('Y-m-d H:i:s'), time() + 3600 );
+            setcookie('preferencias[idioma]','español');
+            setcookie('preferencias[fondo]','rojo');
+        ?>
+
+
+    5.Accede con el navegador a setcookies.php y, a continuación, a vercookies.php. Comprobaras 
+    que se han leído correctamente las 3 cookies. Cierra el navegador, y accede de nuevo a vercookies.php; 
+    comprobaras que sólo pervive la primera cookie porque no se ha cumplido su fecha de expiración.
+
+
+    6.Crea un script llamado comprobarcookies.php con este contenido:
+
+        <?php
+            if( !isset($_COOKIE['Comprobar'])) {
+                setcookie('Comprobar',1,time()+3600);
+                header('Refresh: 5; url=http://' . $_SERVER['HTTP_HOST'] .$_SERVER['PHP_SELF'] );
+
+                echo 'Comprobando si tiene activadas las cookies<br/>';
+                echo 'Esta comprobacion se repite cada 5 segundos';
+            }
+            else{
+            echo 'Gracias por activar las cookies';
+            }
+        ?>
+        
+        setcookie devuelve un bool, pero este bool no indica si las cookies están activadas o no en el cliente. 
+        Para averiguarlo hay que usar alguna técnica similar a la dada en el último punto.
+-->

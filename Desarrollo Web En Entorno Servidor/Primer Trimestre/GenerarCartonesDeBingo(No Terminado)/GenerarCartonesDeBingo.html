@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+    Realizar un programa en PHP que genere aleatoriamente cartones de Bingo que sean correctos:
+
+        - Todas las filas tienen que tener 5 valores y 4 casillas vacías
+        - Cada columna tiene valores de su decena de forma ordenada
+        - La primera : 1 a 9 (9 valores)
+        - La segunda : 10 a 19 (10 valores)
+        - La tercera : 20 a 29 ( 10 valores)
+        - ....
+        - La última  : 80 a 90 (11 valores)
+        - Existen tres columnas con 1 valor y resto solo tiene 2
+        - Dos columnas consecutivas no pueden tener los valores o huecos en las misma posiciones.
+          Por ejemplo:  si la primera columna tiene valores en la fila 1 y 3 la siguiente columna 
+          no puede tener valores en la fila 1 y 3 .
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Generar Cartones de Bingo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        function cambiacolor(celda) {
+            celda.style.color = "#FF0000"
+        }
+    </script>
+</head>
+
+<style>
+    #carton {
+        border: blue 5px dashed;
+    }
+    
+    td {
+        border: blue 1px solid;
+        font-size: xx-large;
+        background-color: rgb(198, 198, 255);
+    }
+</style>
+
+<body>
+    <p>Cartón nº 1</p>>
+    <table id="carton">
+        <tr>
+            <td onclick="cambiacolor(this)">1</td>
+            <td onclick="cambiacolor(this)">4</td>
+            <td onclick="cambiacolor(this)">7</td>
+            <td onclick="cambiacolor(this)">10</td>
+            <td onclick="cambiacolor(this)">13</td>
+            <td onclick="cambiacolor(this)">16</td>
+            <td onclick="cambiacolor(this)">19</td>
+            <td onclick="cambiacolor(this)">22</td>
+            <td onclick="cambiacolor(this)">25</td>
+        </tr>
+        <tr>
+            <td onclick="cambiacolor(this)">2</td>
+            <td onclick="cambiacolor(this)">5</td>
+            <td onclick="cambiacolor(this)">8</td>
+            <td onclick="cambiacolor(this)">11</td>
+            <td onclick="cambiacolor(this)">14</td>
+            <td onclick="cambiacolor(this)">17</td>
+            <td onclick="cambiacolor(this)">20</td>
+            <td onclick="cambiacolor(this)">23</td>
+            <td onclick="cambiacolor(this)">26</td>
+        </tr>
+        <tr>
+            <td onclick="cambiacolor(this)">3</td>
+            <td onclick="cambiacolor(this)">6</td>
+            <td onclick="cambiacolor(this)">9</td>
+            <td onclick="cambiacolor(this)">12</td>
+            <td onclick="cambiacolor(this)">15</td>
+            <td onclick="cambiacolor(this)">18</td>
+            <td onclick="cambiacolor(this)">21</td>
+            <td onclick="cambiacolor(this)">24</td>
+            <td onclick="cambiacolor(this)">27</td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" value="Reset" onclick="location.reload()" />>>
+</body>
+
+</html>

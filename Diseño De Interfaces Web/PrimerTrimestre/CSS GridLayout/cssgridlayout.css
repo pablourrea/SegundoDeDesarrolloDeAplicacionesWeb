@@ -1,0 +1,33 @@
+body {
+    background-color: #c8c8c8;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 50px;
+    letter-spacing: 5px;
+    background-color: #00ffff;
+}
+
+.wrapper {
+    margin-top: 20px;
+    margin-left: 27%;
+    margin-right: 25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}

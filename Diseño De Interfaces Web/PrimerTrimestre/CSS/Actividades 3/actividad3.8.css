@@ -1,0 +1,21 @@
+/* 
+                            +-----------+
+                            | ENUNCIADO |
+                            +-----------+
+  
+    A partir del código HTML proporcionado aplicar las reglas CSS necesarias 
+    para que el formulario muestre el siguiente aspecto:
+
+    - Cuando el usuario pasa el ratón por encima de cada grupo de elementos de 
+      formulario (es decir, por encima de cada <li>) se debe modificar su color de 
+      fondo (sugerencia: color amarillo claro #FF9). Además, cuando el usuario se 
+      posiciona en un cuadro de texto, se debe modificar su borde para resaltar el 
+      campo que está activo cada momento (sugerencia: color amarillo #E6B700).
+
+    - Cuando el usuario pasa el ratón por encima de un grupo de elementos de formulario 
+      (es decir, por encima de cada <li>) se debe mostrar el mensaje de ayuda asociado.
+
+    - Utilizando el menor número de reglas CSS, cambiar el aspecto del formulario para 
+      que se muestre como la siguiente imagen:
+
+*/

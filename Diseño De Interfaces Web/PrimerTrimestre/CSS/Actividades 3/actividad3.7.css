@@ -1,0 +1,20 @@
+/*
+                            +-----------+
+                            | ENUNCIADO |
+                            +-----------+
+  
+    Definir las reglas CSS que permiten mostrar una galería de imágenes similar 
+    a la que se muestra en la siguiente imagen:
+    
+*/
+
+#imagenes {
+    max-width: 650px;
+}
+
+#imagenes img {
+    float: left;
+    margin: 1em;
+    padding: 0.5em;
+    border: 1px solid whitesmoke;
+}

@@ -1,0 +1,19 @@
+Los 10 errores más comunes de un programador junior:
+
+	1. No tener el código limpio.
+	2. Utilizar los comentarios utilmente.
+	3. No hacer pruebas unitarias, test de diseño,
+	   test de punto a punto, test de integración, 
+	   test unitario. 
+	4. No aceptar los fallos. 
+	5. Desconocer las líneas de comando.
+	6. Descontrol de las versiones.
+	7. No crear proyectos personales.
+	8. No entender por qué pasan las cosas.
+	9. Aprender un solo lenguaje.
+	10. No pensar como funcionan las estructuras.
+
+Las que considero más importantes ya que afectan muy directamente
+a tu trabajo o al de los demás son la 1, 2, 4, 8, 9  10. Pero
+claramente, la más importante es la primera, la de no tener el 
+código limpio.

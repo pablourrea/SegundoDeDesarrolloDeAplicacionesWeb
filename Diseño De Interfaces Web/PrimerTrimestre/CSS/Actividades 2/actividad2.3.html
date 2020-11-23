@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+
+<!--
+    Crear un fichero HTML que defina un selector de clase y un selector de identificador. 
+    Probar a usar ID y CLASS en uno y varios elementos HTML y compruebe su afecto ¿qué pasa 
+    si no se cumple la especificación y se repite un identificador en varios elementos? 
+    ¿cómo responde el navegador? Y en otro navegador ¿responde igual?
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Actividad 2.3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #rojo {
+            color: red;
+        }
+        
+        #rojo,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: aqua
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="rojo">Texto h1</h1>
+    <h2>Texto h2</h2>
+    <h3>Texto h3</h3>
+    <h4>Texto h4</h4>
+    <h5>Texto h5</h5>
+    <h6>Texto h6</h6>
+</body>

@@ -1,0 +1,235 @@
+/*
+                            +-----------+
+                            | ENUNCIADO |
+                            +-----------+
+
+    Crear un fichero HTML que defina un selector de clase y un selector de identificador. 
+    Probar a usar ID y CLASS en uno y varios elementos HTML y compruebe su afecto ¿qué pasa 
+    si no se cumple la especificación y se repite un identificador en varios elementos? 
+    ¿cómo responde el navegador? Y en otro navegador ¿responde igual?
+
+    - El elemento #cabecera debe tener un relleno de 1em en todos los lados.
+
+    - El elemento #menu debe tener un relleno de 0.5em en todos los lados y un margen 
+      inferior de 0.5em.
+
+    - El resto de elementos (#noticias, #publicidad, #principal, #secundario) deben tener 
+      0.5em de relleno en todos sus lados, salvo el elemento #pie, que sólo debe tener 
+      relleno en la zona superior e inferior.
+
+    - Los elementos .articulo deben mostrar una separación entre ellos de 1em.
+
+    - Las imágenes de los artículos muestran un margen de 0.5em en todos sus lados.
+
+    - El elemento #publicidad está separado 1em de su elemento superior.
+
+    - El elemento #pie debe tener un margen superior de 1em.
+    
+*/
+
+
+/* === IMPORTANTE ===================================================
+   No modificar estos estilos, ya que son imprescindibles para
+   que la página se vea correctamente.
+   ================================================================== */
+
+
+/*-- Básico ----------------------------------------------------------*/
+
+ul,
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    border: none;
+}
+
+
+/*-- Layout ----------------------------------------------------------*/
+
+#contenedor {
+    width: 90%;
+    max-width: 900px;
+}
+
+#cabecera,
+#menu,
+#lateral,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {
+    border: 2px solid #777;
+}
+
+#cabecera {
+    clear: both;
+}
+
+#menu {
+    clear: both;
+}
+
+#lateral {
+    float: left;
+    width: 20%;
+}
+
+#contenido {
+    float: right;
+    width: 78%;
+}
+
+#contenido #principal {
+    float: left;
+    width: 78%;
+}
+
+#contenido #secundario {
+    float: right;
+    width: 20%;
+}
+
+#pie {
+    clear: both;
+}
+
+
+/*-- Cabecera --------------------------------------------------------*/
+
+#cabecera #logo {
+    float: left;
+}
+
+#cabecera #buscador {
+    float: right;
+}
+
+
+/*-- Menu ------------------------------------------------------------*/
+
+#menu ul#menu_principal li {
+    display: inline;
+    float: left;
+}
+
+
+/*-- Sección Principal -----------------------------------------------*/
+
+#contenido #principal .articulo img {
+    width: 100px;
+    float: left;
+}
+
+
+/*-- Pie de página ---------------------------------------------------*/
+
+#pie .enlaces {
+    float: left;
+}
+
+#pie .copyright {
+    float: right;
+}
+
+
+/* === IMPORTANTE ===================================================
+   A partir de aquí, se pueden añadir todos los estilos propios que 
+   sean necesarios.
+   ================================================================== */
+
+
+/*
+                            +-----------+
+                            | ENUNCIADO |
+                            +-----------+
+
+    Crear un fichero HTML que defina un selector de clase y un selector de identificador. 
+    Probar a usar ID y CLASS en uno y varios elementos HTML y compruebe su afecto ¿qué pasa 
+    si no se cumple la especificación y se repite un identificador en varios elementos? 
+    ¿cómo responde el navegador? Y en otro navegador ¿responde igual?
+
+    - El elemento #cabecera debe tener un relleno de 1em en todos los lados.
+
+    - El elemento #menu debe tener un relleno de 0.5em en todos los lados y un margen 
+      inferior de 0.5em.
+
+    - El resto de elementos (#noticias, #publicidad, #principal, #secundario) deben tener 
+      0.5em de relleno en todos sus lados, salvo el elemento #pie, que sólo debe tener 
+      relleno en la zona superior e inferior.
+
+    - Los elementos .articulo deben mostrar una separación entre ellos de 1em.
+
+    - Las imágenes de los artículos muestran un margen de 0.5em en todos sus lados.
+
+    - El elemento #publicidad está separado 1em de su elemento superior.
+
+    - El elemento #pie debe tener un margen superior de 1em.
+    
+*/
+
+#cabecera,
+#menu,
+#lateral,
+#lateral #noticias,
+#lateral #publicidad,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {
+    padding: 0.5em;
+}
+
+#lateral {
+    padding: 0;
+}
+
+#cabecera {
+    padding: 1em;
+}
+
+#menu {
+    margin-bottom: 0.5em;
+}
+
+#contenido {
+    width: 77%;
+    padding: 0;
+}
+
+#contenido #principal {
+    width: 73%;
+}
+
+#pie {
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+#contenido #principal .articulo {
+    margin-bottom: 1em;
+}
+
+#contenido #principal .articulo img {
+    margin: 0.5em;
+}
+
+#lateral #publicidad {
+    margin-top: 1em;
+}

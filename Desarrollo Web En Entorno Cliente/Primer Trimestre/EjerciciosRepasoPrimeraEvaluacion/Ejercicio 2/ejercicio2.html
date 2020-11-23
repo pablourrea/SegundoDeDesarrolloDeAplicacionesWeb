@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<!--                                Ejercicio 2
+    Desarrollar el código javascript para que al invocar la página html dada, el array siguiente:
+
+    numeros=[4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1];
+
+    Sea procesado de tal forma que únicamente queden aquellos elementos que no se repiten y quede 
+    ordenado. 
+    El array se visualizará en el textárea de la página.
+-->
+
+<head>
+    <title>Repaso 1</title>
+</head>
+
+<body bgcolor="#FFFF99">
+
+    <center>
+        <form name="FORMULARIO">
+            <p>
+                <b>PROCESANDO ARRAY :</b>
+                <BR>
+                <textarea rows="5" name="resul" cols="28" READONLYWRAP id="BOX">Array resultante:
+                </textarea>
+            </p>
+    </center>
+
+    <p>
+        <center><input type="button" onclick="procesoarray()" value="VISUALIZAR ARRAY" name="boton">
+        </center>
+    </p>
+
+    </form>
+    <HR>
+
+    <script>
+        function procesoarray() {
+
+            //Variable array
+            var numeros = [4, 0, 3, 4, 7, 3, 5, 8, 1, 8, 8, 0, 2, 3, 1, 2, 5, 7, 3, 2, 5, 1];
+
+            var textarea = document.getElementsByName("resul");
+
+            //Ordena el array
+            numeros.sort();
+
+            var resultado = numeros.filter(function(item, index, array) {
+                return resultado.indexOf(item) === index;
+            })
+
+            for (var key in numeros) {
+                var num = newarray[key];
+
+                var string = obj + ", ";
+
+                document.getElementById("box").innerHTML = string;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<!--
+    Crear una hoja de estilo para el Ejemplo 15:
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+        <title>Actividad 2.4</title>
+    </head>
+    <body>
+        <div class="ejemplo-linea" >
+            Selecciona DIV1, DIV2 y DIV3 utilizando combinador descendente.
+            <code>&lt;blockquote&gt;</code>.
+            <div class="conten" id="conten1">DIV id="conten1"
+                <div>DIV1
+                    <div>DIV2
+                        <blockquote>BLOCKQUOTE
+                            <div>DIV3</div>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            Selecciona DIV1 y DIV5 utilizando combinador hijo.
+            <div class="conten" id="conten2">DIV id="conten2"
+                <div>DIV1
+                    <div>DIV2
+                        <div>DIV3
+                            <div>DIV4</div>
+                        </div>
+                    </div>
+                </div>
+                <div>DIV5
+                    <div>DIV6</div>
+                </div>
+            </div>
+            Selecciona P1 utilizando combinador de hermano adyacente
+            <code>BLOCKQUOTE</code> no es un <code>&lt;div&gt;</code>.
+            <div class="conten" id="conten3">DIV id="conten3"
+                <div>DIV1
+                    <div>DIV2</div>
+                    <blockquote>BLOCKQUOTE
+                        <div>DIV3</div>
+                        <p>P1</p>
+                    </blockquote>
+                    <p>P2</p>
+                    <div>DIV4</div>
+                </div>
+            </div>
+            Selecciona P1 y P2 utilizando combinadores de hermano general
+            <div class="conten" id="conten4">DIV id="conten4"
+                <div>DIV1
+                    <div>DIV2</div>
+                    <blockquote>BLOCKQUOTE
+                        <div>DIV3</div>
+                        <p>P1</p>
+                    </blockquote>
+                    <p>P2</p>
+                    <div>DIV4</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+
+-->
+
+<head>
+    <link type="text/css"  rel="stylesheet"  href="stylesheet.css" />
+    <title>Actividad 2.4</title>
+</head>
+
+<body>
+    <div class="ejemplo-linea"  >
+        Selecciona DIV1, DIV2 y DIV3 utilizando combinador descendente.
+        <code>&lt;blockquote&gt;</code>.
+        <div class="conten"  id="conten1">DIV id="conten1"
+            <div>DIV1
+                <div>DIV2
+                    <blockquote>BLOCKQUOTE
+                        <div>DIV3</div>
+                    </blockquote>
+                </div>
+            </div>
+            </div>
+            Selecciona DIV1 y DIV5 utilizando combinador hijo.
+            <div class="conten"  id="conten2">DIV id="conten2"
+                <div>DIV1
+                    <div>DIV2
+                        <div>DIV3
+                            <div>DIV4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>DIV5
+                    <div>DIV6</div>
+                </div>
+                </div>
+                Selecciona P1 utilizando combinador de hermano adyacente
+                <code>BLOCKQUOTE</code> no es un <code>&lt;div&gt;</code>.
+                <div class="conten"  id="conten3">DIV id="conten3"
+                    <div>DIV1
+                        <div>DIV2</div>
+
+                        <blockquote>BLOCKQUOTE
+                            <div>DIV3</div>
+
+                            <p>P1</p>
+                        </blockquote>
+
+                        <p>P2</p>
+
+                        <div>DIV4</div>
+                    </div>
+                    </div>
+                    Selecciona P1 y P2 utilizando combinadores de hermano general
+                    <div class="conten"  id="conten4">DIV id="conten4"
+                        <div>DIV1
+                            <div>DIV2</div>
+
+                            <blockquote>BLOCKQUOTE
+                                <div>DIV3</div>
+
+                                <p>P1</p>
+                            </blockquote>
+
+                            <p>P2</p>
+
+                            <div>DIV4</div>
+                        </div>
+                        </div>
+                        </div>
+</body>
+
+</html>
+
+<!-- SOLUCIÓN
+
+div.ejemplo-linea #conten1 #conten2 #conten3 {
+    color: black
+}
+
+div.ejemplo-linea>#conten1>#conten5 {
+    color: black
+}
+
+div+p {
+    color: black
+}
+
+p~p {
+    color: black
+}
+
+-->

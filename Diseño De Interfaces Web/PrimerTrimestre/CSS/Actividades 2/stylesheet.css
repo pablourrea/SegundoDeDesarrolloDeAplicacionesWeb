@@ -1,0 +1,15 @@
+div.ejemplo-linea #conten1 #conten2 #conten3 {
+    color: black
+}
+
+div.ejemplo-linea>#conten1>#conten5 {
+    color: black
+}
+
+div+p {
+    color: black
+}
+
+p~p {
+    color: black
+}

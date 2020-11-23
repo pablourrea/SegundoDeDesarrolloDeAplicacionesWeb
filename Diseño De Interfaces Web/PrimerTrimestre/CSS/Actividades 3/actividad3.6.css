@@ -1,0 +1,328 @@
+/*
+                            +-----------+
+                            | ENUNCIADO |
+                            +-----------+
+
+    A partir del código HTML y CSS de la actividad 3.4, determinar las reglas CSS necesarias para 
+    añadir las siguientes propiedades a la tipografía de la página:
+
+
+    - La fuente base de la página debe ser: color negro, tipo Arial, tamaño 0.9em, interlineado 1.4.
+
+    - Los elementos <h2> de .articulo se muestran en color #CC6600, con un tamaño de letra de 1.6em, 
+      un interlineado de 1.2 y un margen inferior de 0.3em.
+
+    - Los elementos del #menu deben mostrar un margen a su derecha de 1em y los enlaces deben ser de 
+      color blanco y tamaño de letra 1.3em.
+
+    - El tamaño del texto de todos los contenidos de #lateral debe ser de 0.9em. La fecha de cada 
+      noticia debe ocupar el espacio de toda su línea y mostrarse en color gris claro #999. El elemento 
+      <h3> de #noticias debe mostrarse de color #003366.
+
+    - El texto del elemento #publicidad es de color gris oscuro #555 y todos los enlaces de color 
+      <div id="CC6600" class=""></div>
+
+    - Los enlaces contenidos dentro de .articulo son de color #CC6600 y todos los párrafos muestran un 
+      margen superior e inferior de 0.3em.
+
+    - Añadir las reglas necesarias para que el contenido de #secundario se vea como en la imagen que 
+      se muestra.
+      
+    - Añadir las reglas necesarias para que el contenido de #pie se vea como en la imagen que se muestra.
+    
+*/
+
+
+/* === IMPORTANTE ===================================================
+   No modificar estos estilos, ya que son imprescindibles para
+   que la página se vea correctamente.
+   ================================================================== */
+
+
+/*-- Básico ----------------------------------------------------------*/
+
+ul,
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+img {
+    border: none;
+}
+
+
+/*-- Layout ----------------------------------------------------------*/
+
+#contenedor {
+    width: 90%;
+    max-width: 900px;
+}
+
+#cabecera,
+#menu,
+#lateral,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {
+    border: 2px solid #777;
+}
+
+#cabecera {
+    clear: both;
+}
+
+#menu {
+    clear: both;
+}
+
+#lateral {
+    float: left;
+    width: 20%;
+}
+
+#contenido {
+    float: right;
+    width: 78%;
+}
+
+#contenido #principal {
+    float: left;
+    width: 78%;
+}
+
+#contenido #secundario {
+    float: right;
+    width: 20%;
+}
+
+#pie {
+    clear: both;
+}
+
+
+/*-- Cabecera --------------------------------------------------------*/
+
+#cabecera #logo {
+    float: left;
+}
+
+#cabecera #buscador {
+    float: right;
+}
+
+
+/*-- Menu ------------------------------------------------------------*/
+
+#menu ul#menu_principal li {
+    display: inline;
+    float: left;
+}
+
+
+/*-- Sección Principal -----------------------------------------------*/
+
+#contenido #principal .articulo img {
+    width: 100px;
+    float: left;
+}
+
+
+/*-- Pie de página ---------------------------------------------------*/
+
+#pie .enlaces {
+    float: left;
+}
+
+#pie .copyright {
+    float: right;
+}
+
+
+/* === IMPORTANTE ===================================================
+   A partir de aquí, se pueden añadir todos los estilos propios que 
+   sean necesarios.
+   ================================================================== */
+
+
+/*
+                            +-----------+
+                            | ENUNCIADO |
+                            +-----------+
+
+    A partir del código HTML y CSS de la actividad 3.4, determinar las reglas CSS necesarias para 
+    añadir las siguientes propiedades a la tipografía de la página:
+
+
+    - La fuente base de la página debe ser: color negro, tipo Arial, tamaño 0.9em, interlineado 1.4.
+
+    - Los elementos <h2> de .articulo se muestran en color #CC6600, con un tamaño de letra de 1.6em, 
+      un interlineado de 1.2 y un margen inferior de 0.3em.
+
+    - Los elementos del #menu deben mostrar un margen a su derecha de 1em y los enlaces deben ser de 
+      color blanco y tamaño de letra 1.3em.
+
+    - El tamaño del texto de todos los contenidos de #lateral debe ser de 0.9em. La fecha de cada 
+      noticia debe ocupar el espacio de toda su línea y mostrarse en color gris claro #999. El elemento 
+      <h3> de #noticias debe mostrarse de color #003366.
+
+    - El texto del elemento #publicidad es de color gris oscuro #555 y todos los enlaces de color 
+      <div id="CC6600" class=""></div>
+
+    - Los enlaces contenidos dentro de .articulo son de color #CC6600 y todos los párrafos muestran un 
+      margen superior e inferior de 0.3em.
+
+    - Añadir las reglas necesarias para que el contenido de #secundario se vea como en la imagen que 
+      se muestra.
+      
+    - Añadir las reglas necesarias para que el contenido de #pie se vea como en la imagen que se muestra.
+    
+*/
+
+body {
+    font: 0.9em/1.4 Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+#cabecera,
+#menu,
+#lateral,
+#lateral #noticias,
+#lateral #publicidad,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {
+    padding: .5em;
+    border: none;
+}
+
+#lateral {
+    padding: 0;
+    font-size: .9em;
+}
+
+#cabecera {
+    padding: 1em;
+}
+
+#cabecera h1 {
+    background: url(logo.gif) no-repeat -5px -5px;
+    width: 180px;
+}
+
+#cabecera h1 span {
+    visibility: hidden;
+}
+
+#menu {
+    margin-bottom: .5em;
+    border-bottom: 1px solid #004C99;
+    background: url(fondo_menu.gif) repeat-x;
+}
+
+#menu li {
+    margin-right: 1em;
+    font-size: 1.3em;
+}
+
+#menu li a {
+    color: #FFF;
+}
+
+#contenido {
+    width: 77%;
+    padding: 0;
+}
+
+#contenido #principal {
+    width: 73%;
+}
+
+#contenido #secundario {
+    border: 1px solid #C60;
+}
+
+#contenido #secundario h2 {
+    background: #DB905C;
+    padding: 0.2em;
+    font-size: 1em;
+    color: #FFF;
+}
+
+#contenido #secundario p {
+    margin: 0.5em;
+}
+
+#pie {
+    padding: 0.5em;
+    margin-top: 1em;
+    border-top: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+    background: #F8F8F8;
+    color: #555;
+    font-size: 0.75em;
+}
+
+#contenido #principal .articulo {
+    margin-bottom: 1em;
+}
+
+#contenido #principal .articulo p {
+    margin: 0.3em;
+}
+
+#contenido #principal .articulo a {
+    color: #C60;
+}
+
+#contenido #principal .articulo h2 {
+    color: #C60;
+    font-size: 1.6em;
+    line-height: 1.2;
+    margin-bottom: 0.3em;
+}
+
+#contenido #principal .articulo img {
+    margin: 0.5em;
+}
+
+#lateral #noticias {
+    border: 1px solid #C5C5C5;
+    background: #F8F8F8;
+}
+
+#lateral #noticias h3 {
+    color: #036;
+}
+
+#lateral #noticias span.fecha {
+    display: block;
+    color: #999;
+}
+
+#lateral #publicidad {
+    margin-top: 1em;
+    border: 1px dashed #C60;
+    background: #FFF6CD;
+    color: #555;
+}
+
+#lateral #publicidad a {
+    color: #C60;
+}

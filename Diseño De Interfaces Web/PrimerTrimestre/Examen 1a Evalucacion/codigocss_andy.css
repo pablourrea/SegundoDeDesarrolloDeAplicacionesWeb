@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "LatoBlack";
+    src: url('./fonts/Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: "LatoLight";
+    src: url('./fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: "LatoRegular";
+    src: url('./fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "LatoItalic";
+    src: url('./fonts/Lato-Italic.ttf');
+}
+
+body {
+    font-family: 'Robotic', sans-serif;
+    background: #000 url('./img/backgroundcables.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor {
+    margin: 10%;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 150px 750px 200px;
+    grid-template-rows: 150px 1000px 150px;
+}
+
+header {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    background: rgba(255, 255, 255, 0.3);
+    justify-content: space-between;
+    display: inline;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+header img {
+    max-width: 50px;
+    margin-left: 0;
+}
+
+header .titular {
+    margin-left: 30%;
+    margin-top: -45px;
+}
+
+header .menu {
+    margin-left: 70%;
+    margin-top: -25px;
+}
+
+header .menu a {
+    color: #08441c;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+header h1 {
+    color: #08441c;
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+}
+
+.cate {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #08441c;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.cate h3 {
+    color: #fff;
+}
+
+.cate a {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    margin: 10px 0;
+    background: #08441c;
+}
+
+.main {
+    grid-column: 2;
+    grid-row: 2;
+    background: #fff;
+    padding: 20px;
+}
+
+.main article .imagen {
+    margin-bottom: 20px;
+}
+
+.main article .imagen img {
+    vertical-align: top;
+    width: 100px;
+}
+
+.main article h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 32px;
+    font-family: 'Robotic';
+}
+
+.main article p {
+    margin-bottom: 20px;
+    font-family: 'Robotic';
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.main article img {
+    max-width: 700px;
+    max-height: 300px;
+}
+
+aside {
+    grid-column: 3;
+    grid-row: 2;
+    background: #08441c;
+    justify-content: space-between;
+}
+
+aside .elem {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+    background: #08441c;
+    max-width: 50%;
+}
+
+.pie {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-height: 50px;
+    color: #08441c;
+}
+
+footer .sociales {
+    float: right;
+    margin-top: -20px;
+}
+
+footer .sociales a:hover {
+    text-decoration: none;
+}

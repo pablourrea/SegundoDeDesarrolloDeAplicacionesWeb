@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset-iso-8859-1">
+	
+	<title>Factorial</title>
+</head>
+	<body>
+	<form name="fact">
+	<input type="text" name="number" >  <br>
+	<textarea name="resu" > </textarea> <br>
+	<input type="button" value="Factorial" onclick="boton();">
+	</form>
+	
+	<script type="text/javascript">
+	 
+	 function boton() {
+		var n=parseInt(document.fact.number.value); 
+		var resultado=1;
+		factorial(n);
+		
+		function factorial(numero) {
+		 	alert(numero);
+		 	
+             		if ((numero == 0) || (numero == 1)){
+                  		return 1;
+              		}else{
+				
+                  		resultado = (numero * factorial(numero-1));
+			     	alert(resultado);
+			     	
+                  		return resultado;
+                	}
+						
+            	} 
+		document.fact.resu.value=resultado;
+	}
+	 
+	 
+	 
+	 
+	</script>
+	</body>
+	
+	</html>
+

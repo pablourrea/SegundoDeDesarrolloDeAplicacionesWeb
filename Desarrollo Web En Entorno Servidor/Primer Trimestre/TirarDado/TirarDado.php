@@ -54,8 +54,10 @@ $puntosJugador2 = calculaPuntos($dadosJugador2);
 $msgGanador    = generaMensaje($puntosJugador1,$puntosJugador2);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <title>Juego de los dados</title> 

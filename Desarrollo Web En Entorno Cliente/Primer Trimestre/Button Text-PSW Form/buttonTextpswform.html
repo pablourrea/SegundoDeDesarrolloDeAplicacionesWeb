@@ -1,0 +1,61 @@
+<HTML>
+
+<HEAD>
+    <TITLE>OBJETOS -EJEMPLO - Comprobar Password</TITLE>
+
+    <head>
+
+    </head>
+
+    <BODY>
+        <p align="center"><b>VERIFICACI�N DE LA CONTRASE�A</b>
+            <center>
+                <table bgcolor="#FFFFCC" border="2">
+                    <td>
+                        <FORM name="formulario1" method="POST">
+                            Escribe tu nombre:
+                            <INPUT size=30 name="NOMBRE" value="">
+                            <P>Contrase�a:
+                                <INPUT name="clave1" type=password size="20">
+                                <P>Introduce de nuevo la contrase�a:
+                                    <INPUT name="clave2" type=password size="20">
+                                    <P>
+                                        <center>
+                                            <INPUT type="button" value="Enviar" name="Enviar" onClick='validarFormulario();'>
+                                            <INPUT type="reset" value=Restablecer>
+                                        </center>
+                    </td>
+                    </FORM>
+                </table>
+            </center>
+            <SCRIPT language="JAVASCRIPT">
+                function validarFormulario() {
+
+                    if (document.formulario1.clave1.value == "") {
+                        //no se ha introducido contrase�a 
+                        alert("Debes introducir la contrase�a");
+                        document.formulario1.clave1.focus();
+                        //devolver el foco al campo
+
+                    }
+                    if (document.formulario1.clave1.value != document.formulario1.clave2.value) {
+                        //las contrase�as escritas no coinciden 
+                        alert("Las contrase�as introducidas son distintas")
+                        document.formulario1.clave1.focus(); //devolver el foco
+                        document.formulario1.clave1.select(); //seleccionar texto
+
+                    }
+                    if (document.formulario1.clave1.value == document.formulario1.clave2.value) {
+                        //las contrase�as escritas no coinciden 
+                        alert("Las contrase�as introducidas son v�lidas")
+
+
+                    }
+
+
+
+                }
+            </SCRIPT>
+    </body>
+
+</html>

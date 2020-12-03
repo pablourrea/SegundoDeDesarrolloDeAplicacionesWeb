@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Controlando elementos y Programando</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <center>
+        <h2>GENERACION DE FIGURAS GEOMETRICAS</h2>
+        <h3>TRIANGULO</h3>
+
+        <form name="configuracion">
+            <div>
+                <h3>CONFIGURACION</h3>
+                <h4>Opciones del modelo:</h4><br/>
+                <table>
+                    <tr>
+                        <th>Filas</th>
+                        <th>Caracter</th>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="Fila" value="20" />20</td>
+                        <td><input type="radio" name="caracter" value="*" />Asterisco</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="Fila" value="16" />16</td>
+                        <td><input type="radio" name="caracter" value="$" />Dolar</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="Fila" value="13" />13</td>
+                        <td><input type="radio" name="caracter" value="%" />Porcentaje</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="Fila" value="10" />10</td>
+                        <td><input type="radio" name="caracter" value="K" />Letra K<br/></td>
+                    </tr>
+                </table><br><br>
+
+
+                <div name="datos">
+                    <h4> VISUALIZACION DE LA FIGURA: </h4><textarea name='visualizador' cols='39' rows='20'></textarea></div>
+                <input type="button" value="Generar" onClick="genPiramid();">
+            </div>
+        </form>
+    </center>
+    <script type="text/javascript">
+        function genPiramid() {
+            //Establece la variable "fila" en 0 como valor inicial
+            var fila = 0;
+            //Segun el imput del radio cambia el valor de "fila"
+            if (document.configuracion.Fila[0].checked) fila = 20;
+            if (document.configuracion.Fila[1].checked) fila = 16;
+            if (document.configuracion.Fila[2].checked) fila = 13;
+            if (document.configuracion.Fila[3].checked) fila = 10;
+
+            //Establece la variable "caracter" sin valor inicial
+            var caracter = " "
+                //Segun el imput del radio cambia el valor de "caracter"
+            if (document.configuracion.caracter[0].checked) caracter = "*";
+            if (document.configuracion.caracter[1].checked) caracter = "$";
+            if (document.configuracion.caracter[2].checked) caracter = "%";
+            if (document.configuracion.caracter[3].checked) caracter = "K";
+
+            //Establece la variable "piramide" sin valor
+            var piramide = "";
+
+            //Bucle que dibuja en la variable "piramide"
+            for (var i = 1; i < fila; i++) {
+                piramide = piramide + caracter + "\n"
+            }
+
+            //Escribe la variable piramide en el textarea
+            document.configuracion.datos.value = piramide;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "LatoBlack";
+    src: url('../assets/fuentes/Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: "LatoLight";
+    src: url('../assets/fuentes/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: "LatoRegular";
+    src: url('../assets/fuentes/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "LatoItalic";
+    src: url('../assets/fuentes/Lato-Italic.ttf');
+}
+
+body {
+    font-family: 'LatoRegular', sans-serif;
+    background: #000 url('../assets/DSC_0011_des.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor {
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header {
+    background: rgba(255, 255, 255, .2);
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu a {
+    color: #08441c;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+header h1 {
+    color: #08441c;
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    background: #fff;
+    padding: 20px;
+    width: 60%;
+}
+
+.main article .imagen {
+    margin-bottom: 20px;
+}
+
+.main article .imagen img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.main article h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 32px;
+    font-family: 'LatoBlack';
+}
+
+.main article p {
+    margin-bottom: 20px;
+    font-family: 'LatoRegular';
+    font-size: 14px;
+    line-height: 27px;
+}
+
+aside {
+    width: 30%;
+    background: #08441c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+aside .elem {
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #0f7c33;
+    border-radius: 5%;
+}
+
+aside .elem img {
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    opacity: .6;
+}
+
+aside .elem:hover {
+    background: rgb(244, 247, 242);
+}
+
+aside .elem img:hover {
+    opacity: 1;
+}
+
+.iside {
+    width: 10%;
+    background: #1b1b1b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    opacity: .6;
+}
+
+.iside div {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.iside div a {
+    text-decoration: none;
+    color: white;
+}
+
+.iside div a:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+footer {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, .2);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: #08441c;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+}
+
+footer .sociales a {
+    color: #08441c;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+footer .sociales a:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+        flex-direction: row;
+    }
+    aside .elem {
+        width: 40%;
+    }
+    .iside {
+        width: 100%;
+        flex-direction: row;
+    }
+    .iside div {
+        align-content: space-between;
+    }
+}
+
+@media screen and(max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    header .menu {
+        width: 100%;
+        background: rgba(255, 255, 255, .2);
+        text-align: center;
+        padding: 20px;
+    }
+    header .logo {
+        margin-bottom: 20px;
+    }
+    header .menu a {
+        margin: 0 20px;
+    }
+    .iside {
+        flex-direction: row;
+        width: 100%;
+        align-content: flex-start;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .autor {
+        order: 2;
+    }
+    footer .sociales {
+        order: 1;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    aside {
+        display: none;
+    }
+}

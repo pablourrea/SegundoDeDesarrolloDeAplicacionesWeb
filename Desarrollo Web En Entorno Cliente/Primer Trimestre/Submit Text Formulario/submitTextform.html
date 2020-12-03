@@ -1,0 +1,70 @@
+<HTML>
+
+<HEAD>
+    <TITLE>OBJETOS -EJEMPLO - Comprobar Password</TITLE>
+
+    <head>
+        <SCRIPT language="JAVASCRIPT">
+            function validarFormulario(formulario) {
+                alert(formulario);
+                if (formulario.clave1.value == "") {
+                    document.formulario2.NOMBRE2.value = formulario.NOMBRE.value;
+                    alert(document.formulario2.NOMBRE2.value);
+                    //no se ha introducido contrase�a 
+                    alert("Debes introducir la contrase�a");
+                    formulario.clave1.focus();
+
+
+                    //devolver el foco al campo
+                    return false;
+                }
+                if (formulario.clave1.value != formulario.clave2.value) {
+                    //las contrase�as escritas no coinciden 
+                    alert("Las contrase�as introducidas son distintas")
+                    formulario.clave1.focus(); //devolver el foco
+                    formulario.clave1.select(); //seleccionar texto
+                    return;
+                }
+                //formulario.action="http://www.servidor.es/login_servidor.cgi"
+                //formulario.submit(); //enviar datos al servidor 
+
+            }
+        </SCRIPT>
+    </head>
+
+    <BODY>
+        <p align="center"><b>VERIFICACI�N DE LA CONTRASE�A</b>
+            <center>
+                <table bgcolor="#FFFFCC" border="2">
+                    <td>
+                        <FORM name="formulario1" onsubmit="return validarFormulario(this)" method="POST">
+                            Escribe tu nombre:
+                            <INPUT size=30 name="NOMBRE">
+                            <P>Contrase�a:
+                                <INPUT name="clave1" type=password size="20">
+                                <P>Introduce de nuevo la contrase�a:
+                                    <INPUT name="clave2" type=password size="20">
+                                    <P>
+                                        <center>
+                                            <INPUT type="submit" value="Enviar" name="Enviar">&nbsp;
+                                            <INPUT type="reset" value=Restablecer>
+                                        </center>
+                    </td>
+                    </FORM>
+                </table>
+            </center>
+            <center>
+                <table bgcolor="#FFFFCC" border="2">
+                    <td>
+                        <FORM name="formulario2">
+                            Nombre del primer formulario:
+                            <INPUT size=30 name="NOMBRE2">
+                            <center>
+                            </center>
+                    </td>
+                    </FORM>
+                </table>
+            </center>
+    </BODY>
+
+</HTML>

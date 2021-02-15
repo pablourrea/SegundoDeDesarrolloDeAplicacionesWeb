@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    4. Crear una página con un enlace y con un div (caja). 
+    Se pide que cuando el ratón se ponga en  el enlace se le 
+    añada una clase al “div” de tal forma que se modifique su 
+    aspecto (color, tamaño, etc) y cuando se salga del enlace se 
+    le elimine la clase.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <a href="" id="link">Enlace de la pagina</a>
+    <div style="height: 200px; width: 200px; background-color: blue;"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // Funcion que detecta cuando se pone el mouse sobre el link
+        $("a").hover(function() {
+            // Cuando el raton entra en el area del link, este cambia 
+            // su ancho de 200px a 600px.
+            $("div").animate({
+                width: "600px"
+            });
+        }, function() {
+            // Cuando el raton entra en el area del link, este cambia 
+            // su ancho de 600px a 200px, dejandolo como estaba.
+            $("div").animate({
+                width: "200px"
+            });
+        });
+    </script>
+</body>
+
+</html>

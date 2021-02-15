@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    1. Crear una página web con un enlace que lleve nuestro nombre 
+    y una cabecera con un titular. Utilizaremos jquery para que al 
+    pulsar en el enlace se oculte el titular con una duración de 5 
+    segundos. Inmediatamente después se volverá a mostrar tardando
+    3 segundos y finalmente se volverá a ocultar en 0,2 segundos. 
+    Luego volveremos a mostrarlo tardando 2 segundos y nada más 
+    finalizar se mostrará una alerta en pantalla el mensaje “Tras 2 
+    segundos ¡Aquí estoy!” 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- No he conseguido que funcione con un link, despues de 1h 
+        he decidicio que el ejercicio funcione mediante un boton -->
+    <button id="link">Nuestro nombre</button>
+    <h1>Cabecera con un titular</h1>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // Llama a la funcion al clickar sobre el boton
+        $("#link").click(function() {
+            // Esconde el párrafo
+            $("h1").hide();
+            // Tras 5 segundos, muestra el párrafo tardando 3 segundos
+            setTimeout(function() {
+                $("h1").show(3000);
+                // Tras 3 segundos, esconde el párrafo tardando 0,2 segundos
+                setTimeout(function() {
+                    $("h1").hide(200);
+                    // Tras 0,2 segundos, muestra el párrafo tardando 2 segundos
+                    setTimeout(function() {
+                        $("h1").show(2000);
+                        // Tras 2,1 segundos, muestra una alerta
+                        setTimeout(function() {
+                            alert("Tras 2 segundos ¡Aquí estoy!")
+                        }, 2100);
+                    }, 200);
+                }, 3000);
+            }, 5000);
+        });
+    </script>
+
+
+</body>
+
+</html>

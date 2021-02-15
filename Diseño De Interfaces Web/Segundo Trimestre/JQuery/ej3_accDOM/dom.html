@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accediendo a los diferentes elementos del DOM</title>
+
+    <style>
+        .caja1 {
+            background: #4bd330;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            display: inline-block;
+            color: rgb(250, 242, 242);
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial, Sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="interior">
+            <div class="caja1">Primera</div>
+            <div class="caja1">Segunda</div>
+            <div class="caja1" id="tercera">Tercera</div>
+            <div class="caja1">Cuarta</div>
+            <div class="caja1">Quinta</div>
+        </div>
+    </div>
+
+    <script src="../jquery-3.5.1-PRODUCTION.js"></script>
+    <script src="dom.js"></script>
+</body>
+
+</html>

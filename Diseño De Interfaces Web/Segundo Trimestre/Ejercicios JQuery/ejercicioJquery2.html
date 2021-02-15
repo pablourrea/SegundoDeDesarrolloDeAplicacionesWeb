@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    2. Crear una página web con un botón. Al situar el cursor en el 
+    mismo se modificará la opacidad a 0,3 en 0,4 segundos.
+    Al salir del botón se dejará como estaba en 0,4 segundos. 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <button>Boton del ejercicio suficientemente grande para que se aprecie el efecto</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // Funcion que detecta cuando se pone el mouse sobre el boton
+        $("button").hover(function() {
+            // Cuando el raton entra en el area del boton, este cambia 
+            // el canal alfa del boton a 0,3 con una transicion que dura 0,4 segundos.
+            $(this).fadeTo(400, 0.3);
+        }, function() {
+            // Cuando el raton sale del area del boton, este cambia 
+            // el canal alfa del boton a 1 con una transicion que dura 0,4 segundos.
+            $(this).fadeTo(400, 1);
+        });
+    </script>
+</body>
+
+</html>

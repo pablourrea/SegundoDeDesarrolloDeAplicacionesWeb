@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    3. Crear una aplicación con un botón que al pulsarlo la primera 
+    vez lo mueva 400px a la izquierda . Al pulsarlo la siguiente vez 
+    lo debe dejar totalmente a la izquierda. Si se vuelve a pulsar lo 
+    moveremos a 400px, si se vuelve a pulsar a la izquierda,… y así 
+    sucesivamente. En ambos casos se pide que dure 0,3 segundos. 
+    En el primer caso utilizaremos “linear” y en el segundo “swing”.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <button style="margin-left: 800px;" onclick="ejercicioJquery3()">Boton movil</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // La funcion es llamada al clickar el boton y cambia el margen izquierdo del boton
+        function ejercicioJquery3() {
+            $("button").animate({
+                marginLeft: "400px"
+            });
+            // Al volverse a pulsar, vuelve a cambiar el margen
+            $("button").click(function() {
+                $("button").animate({
+                    marginLeft: "0px"
+                });
+                // Al volverse a pulsar, vuelve a cambiar el margen
+                $("button").click(function() {
+                    $("button").animate({
+                        marginLeft: "400px"
+                    });
+                });
+            });
+        };
+    </script>
+</body>
+
+</html>

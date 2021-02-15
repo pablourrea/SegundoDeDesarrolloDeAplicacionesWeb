@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    5.	Crear una página web con 3 chexbox: 
+    Mayor de edad, Socio y Tarjeta Regalo.
+
+    Además tendrá una tabla con las siguientes filas:
+        a.	Debe ir acompañado de un adulto
+        b.	No puede traer invitados
+        c.	Abonará 5% de tasas
+
+    En caso de pulsar el primer checkbox se esconderá la primera fila. 
+    En el caso de pulsar el segundo se esconderá la segunda fila y si 
+    se pulsa el tercero se esconderá la tercera fila. En caso contrario 
+    se mostrarán las mismas filas.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <label><input class="mayorEdad" type="checkbox" name="mayorEdad" onchange="mayorEdad()" />Mayor de edad</label>
+    <label><input class="socio" type="checkbox" name="socio" onchange="socio()" />Socio</label>
+    <label><input class="tarjetaRegalo" type="checkbox" name="tarjetaRegalo" onchange="tarjetaRegalo()" />Tarjeta Regalo</label>
+
+    <br>
+    <h3>REQUISITOS</h3>
+    <div class="mayorEdadshow">Debe ir acompañado de un adulto</div>
+    <div class="socioshow">No puede traer invitados</div>
+    <div class="tarjetaRegaloshow">Abonará 5% de tasas</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // Funciones que muestran u ocultan los divs segun el checkbox
+        function mayorEdad() {
+            if ($('.mayorEdad').is(":checked"))
+                $(".mayorEdadshow").hide();
+            else
+                $(".mayorEdadshow").show();
+        }
+
+        function socio() {
+            if ($('.socio').is(":checked"))
+                $(".socioshow").hide();
+            else
+                $(".socioshow").show();
+        }
+
+        function tarjetaRegalo() {
+            if ($('.tarjetaRegalo').is(":checked"))
+                $(".tarjetaRegaloshow").hide();
+            else
+                $(".tarjetaRegaloshow").show();
+        }
+    </script>
+</body>
+
+</html>

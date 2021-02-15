@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    8. Crear una página web con elementos div, algunos serán 
+    de la clase “selected” y otros no. Todos ellos tendrán 
+    párrafos dentro. Crear un script para que aquellos párrafos 
+    cuyo padre sea de la clase “selected” aparezcan con el fondo 
+    en color amarillo.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+    }
+</style>
+
+<body>
+
+    <div class="selected"></div>
+    <div></div>
+    <div class="selected"></div>
+    <div class="selected"></div>
+    <div class="selected"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="selected"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // Cambia el color de fondo a amarillo para los div con clase "selected"
+        $(".selected").css("background-color", "yellow");
+    </script>
+</body>
+
+</html>

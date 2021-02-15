@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    6. Crear una página web que tenga una tabla con productos de una 
+    juguetería. Tendrá tres botones: Poner borde, Mostrar el valor del 
+    borde, Eliminar borde. Realizar con JQuery las acciones pertinentes.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <button onclick="ponerBorde()">Poner borde</button>
+    <button onclick="valorBorde()">Mostrar el valor del borde</button>
+    <button onclick="eliminarBorde()">Eliminar borde</button>
+
+    <table border="1" style="margin-top: 10px;">
+        <thead>
+            <tr>
+                <th>TIPO 1</th>
+                <th>TIPO 2</th>
+                <th>TIPO 3</th>
+                <th>TIPO 4</th>
+                <th>TIPO 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juguete 1</td>
+                <td>Juguete 2</td>
+                <td>Juguete 3</td>
+                <td>Juguete 4</td>
+                <td>Juguete 5</td>
+
+            </tr>
+            <tr>
+                <td>Juguete 6</td>
+                <td>Juguete 7</td>
+                <td>Juguete 8</td>
+                <td>Juguete 9</td>
+                <td>Juguete 10</td>
+
+            </tr>
+            <tr>
+                <td>Juguete 11</td>
+                <td>Juguete 12</td>
+                <td>Juguete 13</td>
+                <td>Juguete 14</td>
+                <td>Juguete 15</td>
+
+            </tr>
+            <tr>
+                <td>Juguete 16</td>
+                <td>Juguete 17</td>
+                <td>Juguete 18</td>
+                <td>Juguete 19</td>
+                <td>Juguete 20</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // Funcion que pone el borde
+        function ponerBorde() {
+            $("table").attr("border", "1");
+        };
+
+        // Funcion que muestra una alerta con el tamaño del borde de forma manual
+        function valorBorde() {
+            alert("El valor del borde es 1");
+        };
+
+        // Funcion que elimina el borde
+        function eliminarBorde() {
+            $("table").removeAttr("border");
+        };
+    </script>
+</body>
+
+</html>

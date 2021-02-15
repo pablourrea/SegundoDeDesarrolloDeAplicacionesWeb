@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    10. Trabajaremos un “textarea” controlando el evento keyup.
+    Si el usuario va pulsando teclas para escribir en ella, modificaremos 
+    una caja de texto al lado del “textarea” para indicarle en todo 
+    momento el número de caracteres que lleva escritos en dicha “textarea”.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <textarea id="textoEscrito"></textarea>
+    <div id="textoEnVivo"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Funcion que obtiene los datos del textarea
+            function myFunc() {
+                var input = $("#textoEscrito").val();
+                $("#textoEnVivo").text(input);
+            }
+
+            // Llama a la funcion
+            myFunc();
+
+            //Escribe los datos del textarea en el div
+            $('#textoEscrito').keyup(function() {
+                $('#textoEnVivo').html($(this).val());
+            });
+
+            // Actualiza el div llamando a la funcion cada vez que cambia el textarea
+            $('#textoEscrito').change(function() {
+                myFunc();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    7. Crear un formulario que pida las notas de las asignaturas 
+    del curso. Al situar el foco en cada uno de los campos de nota 
+    se debe modificar el color del texto a rojo. Cuando no tenga el 
+    foco el color del texto debe ser verde.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- Este ejercicio se simplifica enormemente utilizando CSS en lugar de JQuery -->
+<style>
+    .texto {
+        background-color: green;
+    }
+    
+    .texto:focus {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <form>
+        <h2>Calificaciones</h2>
+        <input class="texto" type="text" /><br>
+        <input class="texto" type="text" /><br>
+        <input class="texto" type="text" /><br>
+        <input class="texto" type="text" /><br>
+        <input class="texto" type="text" /><br>
+        <input class="texto" type="text" /><br>
+        <input class="texto" type="text" /><br>
+        <input class="texto" type="text" />
+    </form>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // Establece el color de fondo en verde
+        $(".texto").css("background-color", "green");
+
+        // Cuando tiene el foco, el fondo cambia a rojo
+        $("input.texto").focus(function() {
+            $(".texto").css("background-color", "red");
+        });
+    </script> -->
+</body>
+
+</html>

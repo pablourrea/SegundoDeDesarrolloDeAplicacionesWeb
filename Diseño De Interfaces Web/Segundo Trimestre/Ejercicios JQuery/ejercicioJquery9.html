@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- 
+    9. Realizar una miniweb con secciones, artículos y párrafos. 
+    Dispondremos en el footer de 6 botones que nos permitirán aumentar 
+    o disminuir la fuente de cada una de las partes de nuestra web.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <P>TEXTO QUE CAMBIA DE TAMAÑO</P>
+
+    <button onclick="muyPequeña();">Muy pequeña</button>
+    <button onclick="pequeña();">Pequeña</button>
+    <button onclick="mediana();">Mediana</button>
+    <button onclick="grande();">Grande</button>
+    <button onclick="muyGrande();">Muy grande</button>
+    <button onclick="extraGrande();">Extra grande</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript">
+        // Funciones que actualizan los estilos del texto segun el boton pulsado
+        function muyPequeña() {
+            $("body").css("font-size", "0.1em");
+        };
+
+        function pequeña() {
+            $("body").css("font-size", "1em");
+        };
+
+        function mediana() {
+            $("body").css("font-size", "4em");
+        };
+
+        function grande() {
+            $("body").css("font-size", "10em");
+        };
+
+        function muyGrande() {
+            $("body").css("font-size", "15em");
+        };
+
+        function extraGrande() {
+            $("body").css("font-size", "20em");
+        };
+    </script>
+</body>
+
+</html>

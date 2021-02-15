@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>e-comercio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    .central-div-background {
+        margin: auto;
+        margin-top: 10%;
+        width: 600px;
+        background-color: rgb(220, 220, 220);
+        text-align: center;
+        font-style: italic;
+        font-size: 25px;
+        color: rgb(0, 0, 255);
+        padding: 30px;
+        border-style: solid;
+        border-width: 5px;
+        border-radius: 5px;
+        border-color: rgb(0, 0, 255);
+    }
+    
+    .title-class-access {
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 900;
+    }
+</style>
+
+<body>
+    <div class="central-div-background">
+        <p class="title-class-access">CONTROL DE ACCESO E-COMERCIO</p>
+
+        <form name='entrada' action="./controlpedido.php" method="GET">
+            <label for="nombre">Nombre de cliente:</label><br>
+            <input type="text" name="nombre" size="15"><br><br>
+            <label for="clave">Contraseña:</label><br>
+            <input type="password" name="clave" size="15"><br><br>
+            <input type="submit" name="orden" value="Entrar">
+        </form>
+
+    </div>
+</body>
+
+</html>

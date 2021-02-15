@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8" />
+<title>Contactos</title>
+<script type="text/javascript">
+	document.addEventListener("readystatechange",function(){
+		if(document.readyState == "complete"){
+
+			//Añadimos oyentes de evento a cada input text para pasar el foco al siguiente pulsando enter
+			for(var i=0;i<document.querySelectorAll("input[type=text]").length;i++){
+				document.querySelectorAll("input[type=text]")[i].addEventListener("keydown",function(e){
+					if(e.keyCode == 13){
+						e.preventDefault();
+						switch(e.target.name){
+							case "nombre":
+								document.forms[0].apellidos.focus();
+								break;
+							case "apellidos":
+								document.forms[0].email.focus();
+								break;
+							case "email":
+								document.forms[0].buscar.focus();
+								break;
+						}
+					}
+				});
+			}
+		}
+	});
+</script>
+	
+	
+</head>
+<body>
+	<h1>Contactos</h1>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Apellidos</th>
+			<th>Email</th>
+			<th>Acciones</th>
+		</tr>
+	</table>
+
+	<form>
+		<div>
+			<label>Nombre:</label>
+			<div><input type="text" name="nombre"/></div>
+		</div>
+		<div>
+			<label>Apellidos:</label>
+			<div><input type="text" name="apellidos"/></div>
+		</div>
+		<div>
+			<label>Email:</label>
+			<div><input type="text" name="email"/></div><br>
+			<label>Indice a buscar:</label><input type="text" name="buscar"/>
+		</div><br>
+		<div>
+			<div>
+				<div><input type="button" value="Eliminar" id="eliminar"/></div><br>
+			</div>
+			<div>
+				<div><input type="button" value="Guardar" id="guardar"/></div>
+			</div>
+		</div>
+		<input type="hidden"  value="0" />
+	</form>
+	
+
+</body>
+</html>

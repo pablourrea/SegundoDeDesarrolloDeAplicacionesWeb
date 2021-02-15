@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Ejemplo Uso eventos teclado</title><meta charset="utf-8">
+</head>
+<body>
+<div id="cabecera">
+<h2>CONTROLANDO EVENTOS DE TECLADO</h2>
+<h3>Ejemplo JavaScript: pulse una tecla</h3>
+</div>
+<div id="control"></div>
+</body>
+</html>

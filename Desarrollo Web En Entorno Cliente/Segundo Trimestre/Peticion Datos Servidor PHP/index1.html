@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>EjERCICIO AJAX PHP</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <h1>Segundo Ejercicio</h1>
+            <hr/>
+            <p class="lead">Autocompletado de un campo</p>
+        </header>
+        <div class="col-lg-6" style="margin-bottom:50px;">
+            <form class="form">
+                <!--
+                *   Hay que añadir la funcion de deteccion de teclas
+                *   "onkeyup="filtra(this.value)"" que llama a la funcion del script
+                -->
+                Buscar por nombre: <input name="buscador" type="text" onkeyup="filtra(this.value)">
+            </form>
+            <br/>
+            <br/>
+            <b>Resultados</b>
+            <br/>
+            <br/>
+            <span id="resultado"></span>
+        </div>
+        <footer class="col-lg-12 text-center">
+            Examen 24 febrero 2020 DWEC
+        </footer>
+    </div>
+
+    <script>
+        function filtra(str) {
+            // Si no se introduce nada, no se meustra nada
+            if (str.length == 0) {
+                document.getElementById("resultado").innerHTML = "";
+
+                return;
+                // Si la cadena introducida tiene 1 caracter o mas, muestra resultados
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+
+                //Si se realiza un cambio en el imput, refresca la peticion
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        //Modifica el tag con id "resultado" con las coincidencias encontradas
+                        document.getElementById("resultado").innerHTML = this.responseText;
+                    }
+                };
+
+                //Abre el archivo PHP y manda la peticion
+                xmlhttp.open("GET", "datos.php?q=" + str, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

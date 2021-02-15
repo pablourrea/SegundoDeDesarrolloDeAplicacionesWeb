@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+		<script>
+			function agnadirItem(){
+				document.getElementsByTagName('ol')[0].innerHTML += '<li>&Iacute;tem</li>';
+			}	
+			function duplicarListaDebajo(){
+				var lista = document.getElementsByTagName('ol')[0];
+				alert(lista.outerHTML);
+				lista.insertAdjacentHTML('afterend',lista.outerHTML);
+			}	
+		</script>
+	</head>
+	<body>
+		<button type='button' onclick='agnadirItem();'>A&ntilde;adir &iacute;tem</button>
+		<button type='button' onclick='duplicarListaDebajo();'>Duplicar lista debajo</button>
+		<ol></ol>				
+	</body>
+</html>

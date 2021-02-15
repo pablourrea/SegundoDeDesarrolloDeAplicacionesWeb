@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+		<script>
+			function insertar(){
+				var codigoFila = '<td>' + document.getElementById('texto').value +'</td>';
+				codigoFila += "<td><button type='button' onclick='clonarEncima(this);'>Clonar encima</button></td>";
+				codigoFila += "<td><button type='button' onclick='eliminar(this);'>Eliminar</button></td>";
+				var fila = document.createElement('tr');
+				fila.innerHTML = codigoFila;
+				document.getElementById('tabla').appendChild(fila);
+			}
+			function eliminar(boton){
+				var fila = boton.parentNode.parentNode;
+				document.getElementById('tabla').removeChild(fila);
+			}
+			function clonarEncima(boton){
+				var fila = boton.parentNode.parentNode;
+				document.getElementById('tabla').insertBefore(fila.cloneNode(true),fila);
+			}
+		</script>
+	</head>
+	<body>
+		<label for='texto'>Texto:</label>
+		<input id ='texto' type='text'/>
+		<button type='button' onclick='insertar();'>Insertar en tabla</button>
+		<table id='tabla' style='border: 3px solid black;'></table>				
+	</body>
+</html>

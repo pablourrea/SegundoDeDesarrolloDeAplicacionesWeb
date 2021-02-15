@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>PRIMER EJERCICIO</TITLE>
+</HEAD>
+<BODY>
+<FORM name="humano">
+<center><p>Se trata de diseñar un pequeño formulario que detecte</p>
+<p>en el lado del cliente la presencia o no de una máquina</p>
+<input type="text" name="referencia" align="center" style="font-size:100%;text-align:center;font-family:fantasy;">
+<h3 align="center">Introduzca en la siguiente caja los caracteres de la caja superior</h3>
+<input type="text" name="cliente" style="font-size:100%;text-align:center;"><br><br>
+<input type="button" value="Aceptar" onClick="comparar();">
+</center>
+</form>
+<script language="javascript">
+
+var texto="";
+for (var i=0;i<=5;i++){
+var numero=eval(65 + Math.floor(Math.random() * 25));
+var cadena=String.fromCharCode(numero);
+texto=texto + cadena;
+}
+document.humano.referencia.value=texto;
+function comparar(){
+alert(document.humano.referencia.value);
+alert(document.humano.cliente.value);
+	if (document.humano.cliente.value==document.humano.referencia.value){
+       		alert("Gracias por utilizar nuestra aplicació");
+		document.humano.cliente.value="";
+	}
+	else{
+		alert("No está autorizado a entrar en nuestra aplicación");
+		document.humano.cliente.value="";
+	}
+
+}
+
+
+
+</script>
+</body>
+</html>

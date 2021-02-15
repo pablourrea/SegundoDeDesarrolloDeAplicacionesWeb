@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Eje1 uso checkbox, botones y textbox </title>
+<script language="javascript">
+document.addEventListener("DOMContentLoaded",inicializar,false);
+var ventana;
+var radioelegida="";
+var checkselegidos="";
+var tot;
+
+function inicializar(){
+	for (var i=0;i<document.getElementsByTagName("input").length;i++){
+		switch (i){
+			case 0:
+				document.getElementsByTagName("input")[i].value="";
+				break;
+			case 1:
+			case 2:
+			case 3:
+				document.getElementsByTagName("input")[i].addEventListener("click", tratarevento,false);
+				document.getElementsByTagName("input")[i].checked=false;
+				break;
+			case 4:
+			case 5:
+			case 6:
+				document.getElementsByTagName("input")[i].checked=false;
+				break;
+			case 7:
+				document.getElementsByTagName("input")[i].addEventListener("click", tratarevento,false);
+				break;
+			case 8:
+				document.getElementsByTagName("input")[i].value="";
+				break;
+			case 9:
+				document.getElementsByTagName("input")[i].addEventListener("click", tratarevento,false);
+				break;
+		}
+		/*
+		if (i==8){
+			document.getElementsByTagName("input")[i].value="";
+		 	continue;
+		}else{
+			document.getElementsByTagName("input")[i].addEventListener("click", tratarevento,false);
+		}*/
+	}
+}
+
+function tratarevento(e){
+	switch (e.target.type){
+		case "radio":
+			obtenerperiodo();
+			break;
+		
+		case "button":
+			if (e.target.name == "Calcular"){
+				calcularsuma();
+			}else{
+				verseleccion();
+			}
+			break;
+	}
+}
+
+function obtenerperiodo(){
+	
+	for (let i=0;i<document.getElementsByName("GRUPORADIO").length;i++){
+			if(document.getElementsByName("GRUPORADIO")[i].checked){
+				radioelegida="Valor de la opción de pago => "+document.getElementsByName("GRUPORADIO")[i].value+"<BR>"
+			}
+	}
+}
+
+
+function calcularsuma(e){ 
+	tot=0; 
+
+	if (document.getElementsByName("AIRE")[0].checked) tot=tot+750;
+	if (document.getElementsByName("ELEVALUNAS")[0].checked) tot=tot+400;
+	if (document.getElementsByName("RADIO")[0].checked) tot=tot+250; 
+
+	document.getElementsByName("TOTAL")[0].value=tot; 
+}
+
+function verseleccion(){
+	for (let i=4;i<7;i++){ //casillas elementos 4 a 6
+		 
+		if(document.getElementsByTagName("input")[i].checked){
+			
+			checkselegidos+=document.getElementsByTagName("input")[i].name + "<BR>" + " * Valor: "+document.getElementsByTagName("input")[i].value +"<BR>" 		 
+	
+		}
+	}
+	ventana=window.open("","",'width=350,height=225');
+	
+	ventana.document.write("<B>Sr. "+ document.getElementsByTagName("input")[0].value + ":</B></BR>"); 
+
+	ventana.document.write("<B>BOTON SELECCIONADO:</B><BR>" + radioelegida + "<B>Nombre de casilla:</B><BR> "+ checkselegidos);
+	
+}
+</script>
+</head>
+<body>
+<CENTER>
+<form name="CONTROLES">
+<a>DATOS DEL PEDIDO</a>
+<p><b>Nombre y Apellidos:</b>
+<input type="textbox" name="nombre">
+<p><b>Forma de pago:</b><b>
+<input type="radio" name="GRUPORADIO" value="Mensual"></b>Mensual
+<input type="radio" name="GRUPORADIO" value="Trimestral">Trimestral
+<input type="radio" name="GRUPORADIO" value="Anual">Anual
+</p>
+<p><b>Accesorios</b><b>: 
+<input type="checkbox" name="AIRE" value="Aire Acondicionado"></b>Aire Acondicionado 
+<input type="checkbox" name="ELEVALUNAS" value="Elevalunas Eléctrico">Elevalunas Eléctrico
+<input type="checkbox" name="RADIO" value="RadioCD">RadioCD
+</p> 
+<input type="button" value="Calcular" name="Calcular"> 
+<b>TOTAL:</b> <input type="text" name="TOTAL" size="10" value=0 READONLY>Euros
+<input type="button" value="Ver selecciones" name="VER">
+</form>
+</CENTER>
+</body>
+</html> 

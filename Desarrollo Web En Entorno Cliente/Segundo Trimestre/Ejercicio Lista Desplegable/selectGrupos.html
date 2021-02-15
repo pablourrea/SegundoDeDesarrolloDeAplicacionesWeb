@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!--                                    +---------+
+                                        |ENUNCIADO|
+                                        +---------+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>Acceso a listas de selecci&oacute;n m&uacute;ltiple</title> 
+</head>
+
+<body>
+
+    <form name="elige" action="#" >
+        <h2>Elige varios grupos de rock de la siguiente lista:</h2>
+        <select name="grupos" multiple="multiple" >
+        <option value="Rolling Stones">Rolling Stones</option>
+        <option value=">Led Zeppelin">Led Zeppelin</option>
+        <option value="Dire Straits">Dire Straits</option>
+        <option value="Pink Floid">Pink Floid</option>
+        <option value="Queen">Queen</option>
+        <option value="The Police">The Police</option>
+        </select><br/><br/>
+        <input type="button" name="pulsar" onclick="escribe()" value="pulsa despu&eacute;s de elegir" />
+    </form>
+
+    <p >Has elegido los siguientes grupos:</p>
+    <h4 id="respuesta"><h4>
+
+</body>
+
+</html>
+
+-->
+
+<head>
+    <title>Acceso a listas de selecci&oacute;n m&uacute;ltiple</title>
+</head>
+
+<body>
+
+    <form name="elige" action="#">
+        <h2>Elige varios grupos de rock de la siguiente lista:</h2>
+        <select name="grupos" multiple="multiple">
+            <option value="Rolling Stones">Rolling Stones</option>
+            <option value=">Led Zeppelin">Led Zeppelin</option>
+            <option value="Dire Straits">Dire Straits</option>
+            <option value="Pink Floid">Pink Floid</option>
+            <option value="Queen">Queen</option>
+            <option value="The Police">The Police</option>
+        </select><br/><br/>
+        <input type="button" name="pulsar" onclick="escribe()" value="pulsa despu&eacute;s de elegir" />
+    </form>
+
+    <p>Has elegido los siguientes grupos:</p>
+    <h4 id="respuesta"></h4>
+
+    <script type="text/javascript">
+        //Función llamada mediante el botón "pulsar"
+        function escribe() {
+            //Define las variables locales a partir de las opciones de la lista
+            lista = document.elige.grupos //Elementos seleccionados (Aún sin definir)
+            opciones = lista.options //Número de elementos seleccionados
+
+            //Define las variables locales del elemento h4 de respuesta
+            escribir = document.getElementById("respuesta")
+            escribir.innerHTML = ""
+
+            //Ciclo de creación de respuesta
+            for (i = 0; i < opciones.length; i++) {
+                if (opciones[i].selected == true) { //Si la opción está seleccionada
+                    //Escribe el elemento y un salto de línea
+                    grupos = opciones[i].text
+                    escribir.innerHTML += grupos + "<br/>"
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

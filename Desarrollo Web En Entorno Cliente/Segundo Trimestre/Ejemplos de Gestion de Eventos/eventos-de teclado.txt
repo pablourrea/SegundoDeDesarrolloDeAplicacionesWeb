@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+		<style>
+		</style>
+		<script>
+			function imprimirEvento(evento) {
+				control.addEventListener('input', imprimirEvento);
+				var mensaje = evento.type + ' - ';
+				switch (evento.type) {
+					case 'keydown':
+					case 'keyup':
+						mensaje += evento.keyCode + '\n';
+						break;
+					case 'keypress':
+						mensaje += evento.charCode + '\n';
+						break;
+					case 'input':
+						mensaje += evento.data + '\n';
+						break;
+				}
+				eventos.value += mensaje;
+			}
+
+			function asignarEventos(evento) {
+				if (document.readyState == 'complete') {
+					control = document.getElementById('invitados');
+					control.addEventListener('keydown', imprimirEvento);
+					control.addEventListener('keyup', imprimirEvento);
+					control.addEventListener('keypress', imprimirEvento);
+					control.addEventListener('input', imprimirEvento);
+					eventos = document.getElementById('eventos');
+				}
+			}
+			document.addEventListener('readystatechange', asignarEventos, false);
+		</script>
+	</head>
+	<body>
+		<label for='invitados'>Invitados:</label>
+		<input id='invitados' type='number' min='0' max='10' step='1'/>
+		<br />
+		<textarea id='eventos' cols='100' rows='25'></textarea>
+	</body>
+</html>

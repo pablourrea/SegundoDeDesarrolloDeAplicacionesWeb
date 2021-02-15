@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Modificando nodos con el árbol DOM</title>
+    <style>
+        #mostrar {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body onload="temporizador()">
+    <div id="parrafillo">
+        Este es un párrafo que contiene muchas cosas:
+        <ul>
+            <li>Una</li>
+            <li>lista</li>
+        </ul>
+
+        <table border=1>
+            <tr>
+                <td>Y una</td>
+                <td>tabla!</td>
+            </tr>
+        </table>
+    </div>
+    <div id="mostrar">
+        Y lo cambio completamente
+        <ol>
+            <li>aunque</li>
+            <li>también incluyo</li>
+            <li>una lista</li>
+        </ol>
+
+    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById("parrafillo").style.display = "none";
+            document.getElementById("mostrar").style.visibility = "visible";
+        }, 5000, "JavaScript");
+    </script>
+
+</body>
+
+</html>

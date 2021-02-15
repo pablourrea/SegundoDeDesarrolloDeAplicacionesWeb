@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>FORMULARIO DE REGISTRO</TITLE>
+		<script type="text/javascript" src="registrandoGarcia.js"></script>
+	</HEAD>
+	<BODY>
+
+		<form name="formulario" method="post" enctype="text/plain">
+			Nombre: <input type="text" name="nombre" id="nombre" size="25" maxlength="50"><br><br>
+			Apellidos: <input type="text" name="apellidos" id="apellidos" size="35" maxlength="100">
+			<br><br>
+			Correo electrónico: <input type="text" value="@" name="correo" id="correo" size="40" maxlength="100">
+			<br><br>
+			Población: <input type="text" name="poblacion" id="poblacion" size="15" maxlength="50">
+			<br><br>
+			Provincia: <input type="text" name="provincia" id="provincia" size="15" maxlength="50">
+			<table align="center" width="100%" border="0" cellspacing="0" cellpadding="10">
+				<tr>
+					<td>Edad:<br>
+						<input type="radio" name="edad" value="020"> 0-20<br>
+						<input type="radio" name="edad" value="2040" checked> 20-40<br>
+						<input type="radio" name="edad" value="4060"> 40-60<br>
+						<input type="radio" name="edad" value="60100"> 60-100
+					</td>
+					<td>&iquest;C&oacute;mo nos conociste?<br>
+						<input type="checkbox" name="conocer" value="Por amigos">A trav&eacute;s de un amigo.<br>
+						<input type="checkbox" name="conocer" value="Utilizando buscador">A trav&eacute;s de un buscador.<br>
+						<input type="checkbox" name="conocer" value="Navegando">Navegando por la red.<br>
+						<input type="checkbox" name="conocer" value="Redes Sociales">Redes Sociales
+					</td>
+				</tr><br><br>
+				<tr>
+					<td>
+						<input type="button" value="Registrar" onclick="registrar();">
+					</td>
+					<td>
+						<input type="Reset" value="Limpiar">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="Buscar" onclick="buscar();">
+					</td>
+				</tr>
+			</table>
+			<textarea id="objeto">
+				
+			</textarea>
+		</form>
+
+	</body>
+	</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+		<style>
+			div#padre {
+				background-color: blue;
+				width: 100px;
+				height: 100px;
+				float: left;
+			}
+			div#hijo {
+				background-color: red;
+				width: 50px;
+				height: 50px;
+				margin: 25px;
+				float: left;
+			}
+			div#nieto {
+				background-color: yellow;
+				width: 30px;
+				height: 30px;
+				margin: 10px;
+			}
+		</style>
+		<script>
+			function imprimirEvento(evento) {
+				var mensaje = evento.type + ' - ';
+				mensaje += evento.clientY + ' - ' + evento.screenY;
+				mensaje += ' - ' + evento.altKey;
+				console.log(mensaje);
+			}
+
+			function asignarEventos(evento) {
+				var i;
+				if (document.readyState == 'complete') {
+					document.getElementById('padre').addEventListener('mouseover', imprimirEvento, true);
+					document.getElementById('padre').addEventListener('mouseout', imprimirEvento, true);
+					document.getElementById('padre').addEventListener('mouseenter', imprimirEvento, true);
+					document.getElementById('padre').addEventListener('mouseleave', imprimirEvento, true);
+					document.getElementById('padre').addEventListener('click', imprimirEvento, true);
+					document.getElementById('padre').addEventListener('mousemove', imprimirEvento, true);
+				}
+			}
+			document.addEventListener('readystatechange', asignarEventos, false);
+		</script>
+	</head>
+	<body>
+		<div id='padre'>
+			<div id='hijo'>
+				<div id='nieto'></div>
+			</div>
+		</div>
+	</body>
+</html>

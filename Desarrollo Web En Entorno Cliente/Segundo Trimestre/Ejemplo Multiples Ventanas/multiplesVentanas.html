@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Ejemplo Múltiples Ventanas</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h3>Apertura de múltiples ventanas</h3>
+    <input type="button" name="pulsar" onclick="ventanas()" value="Abre múltiples ventanas" />
+    <script type="text/javascript">
+        function ventanas() {
+            //Variables locales
+            var numWindows = 10; //Número de ventanas
+            var leftMove = 0; //Movimiento horizontal
+            var topMove = 0; //Movimiento vertical
+
+            //Ciclo de apertura múltiple
+            for (var i = 0; i < numWindows; i++) {
+                //Abre nueva ventana y la mueve
+                newWindow = window.open("", "", "width = 400, height = 400, left = " + leftMove + "top = " + topMove);
+
+                //Escribe en la nueva ventana
+                newWindow.document.write("<head><title>Ventana " + i + "</title></head><body><h1>Ventana " + i + "</h1></br><input type=\"button\" name=\"pulsar\" onclick=\"window.close()\" value=\"Cerrar Ventana\" /></body>");
+
+                //Cambia las variables de posición
+                leftMove += 50;
+                topMove += 50;
+
+                //Vacía la variable para crear una nueva ventana en el próximo ciclo
+                newWindow = "";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+		<style>
+			.activo {color:red;}
+		</style>
+		<script>			
+			function cambiarElementoActivo(elemento){
+				elementoActivo.className='';
+				elemento.className = 'activo';
+				elementoActivo = elemento;
+			}
+			function primerHijo(){
+                                alert(elementoActivo);
+                                alert(elementoActivo.nextSibling);
+				if(elementoActivo.nextSibling != null){
+					if(elementoActivo.nextSibling.nodeName == 'OL'){
+                                                alert(elementoActivo.nextSibling.firstChild);
+						cambiarElementoActivo(elementoActivo.nextSibling.firstChild);
+					}
+				}
+			}
+			function ultimoHijo(){
+				if(elementoActivo.nextSibling != null){
+					if(elementoActivo.nextSibling.nodeName == 'OL'){
+						if(elementoActivo.nextSibling.lastChild.nodeName == 'LI'){
+							cambiarElementoActivo(elementoActivo.nextSibling.lastChild);
+						}else{
+							cambiarElementoActivo(elementoActivo.nextSibling.firstChild);
+						}						
+					}
+				}
+			}
+			function siguienteHermano(){
+				if(elementoActivo.nextSibling != null){
+					if(elementoActivo.nextSibling.nodeName == 'LI'){
+						cambiarElementoActivo(elementoActivo.nextSibling);
+					}
+				}
+			}
+			function anteriorHermano(){
+				if(elementoActivo.previousSibling != null){
+					if(elementoActivo.previousSibling.nodeName == 'LI'){
+						cambiarElementoActivo(elementoActivo.previousSibling);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ol><li id='abuelo' class='activo'>Abuelo</li><ol><li>Padre</li><ol><li>Hijo mayor</li><li>Hijo mediano</li><li>Hijo menor</li></ol></ol></ol>				
+		<button type='button' onclick='primerHijo();'>firstChild</button>
+		<button type='button' onclick='ultimoHijo();'>lastChild</button>
+		<button type='button' onclick='anteriorHermano();'>previousSibling</button>
+		<button type='button' onclick='siguienteHermano();'>nextSibling</button>
+		<script>
+			var elementoActivo = document.getElementById('abuelo');
+                        listaordenada=elementoActivo.parentNode
+                        cuerpo=listaordenada.parentNode
+                        texto=cuerpo.previousSibling
+                        alert(texto.previousSibling.nodeName)
+                        alert(cuerpo.parentNode.nodeName);
+                        tipodoc=cuerpo.parentNode
+                        alert(tipodoc.parentNode.nodeName)
+                        Doc=tipodoc.parentNode
+                        alert(Doc.parentNode)
+		</script>
+	</body>
+</html>

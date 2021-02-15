@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Añadir CheckBox</title>
+</head>
+<body>
+<div id="residence">
+	<p>Opciones de vida</p>
+</div>
+<script>
+function anadiropciones(){
+var residence = document.getElementById('residence');
+
+	var checkbox = document.createElement('input');
+	checkbox.type = "checkbox";
+	checkbox.name = "name";
+	checkbox.value = "value";
+	checkbox.id = "id";
+
+	var label = document.createElement('label')
+	label.htmlFor = "id";
+	label.appendChild(document.createTextNode('Texto para la etiqueta asociada al checkbox'));
+
+	residence.appendChild(checkbox);
+	residence.appendChild(label);
+	
+}
+setTimeout( "anadiropciones()", 5000);
+</script>
+</body>
+</html>

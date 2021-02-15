@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<style> 
+h1 { font-size:150px; }
+</style>
+<head>
+<title>Reloj</title>
+<meta charset="utf-8">
+</head>
+ 
+ <body onload="iniciar()"> 
+<div style= "text-align:center;width: 100%;display: flex;flex-flow: row wrap; justify-content:center;" id ="Reloj"></div>
+
+<script>
+
+function reloj() {
+    var date=new Date(); 
+	var horas=date.getHours(); 
+	var minutos=date.getMinutes(); 
+	var segundos=date.getSeconds();
+    minutos = actualizarHora(minutos);    
+	segundos = actualizarHora(segundos);
+    document.getElementById('Reloj').innerHTML = 
+	"<h1 style=border-radius:10%;background:black;color:white>"+horas+"</h1> <h1> : </h1> <h1 style=border-radius:10%;background:black;color:white>"+minutos+"</h1> <h1> : </h1> <h1 style=border-radius:10%;background:black;color:white >"+segundos+"</h1>";  
+}
+
+function iniciar() {
+    var Reloj = setInterval( reloj,500 );
+}
+
+function actualizarHora(i) {
+     if (i<10) {
+	     i = "0" + i;
+	 }  
+     return i;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ejercicio de Comunidades</title>
+
+    <script>
+        var xhr;
+        var caja1;
+        var caja2;
+        var objetoPeticion = new Object();
+        var objetoRespuesta;
+
+        document.addEventListener('readystatechange', inicializar, false);
+        function inicializar() {
+            if (document.readyState == 'complete') {
+                caja1 = document.getElementById('uno');
+                caja2 = document.getElementById('dos');
+                caja1.addEventListener('change', enviarPeticionAJAX, false);
+            }
+        }
+
+        function enviarPeticionAJAX(evento) {
+            if (caja1.value !=''){
+                objetoPeticion.comunidad = caja1.value;
+                caja2.disabled = false;
+                xhr = new XMLHttpRequest();
+                xhr.addEventListener('readystatechange', gestionarRespuesta, false);
+                xhr.open('POST', 'provincias.json', true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(JSON.stringify(objetoPeticion));
+
+                while ( caja2.childNodes.length >= 1 )
+                {
+                    caja2.removeChild( caja2.firstChild );
+                }
+            }
+        }
+        function gestionarRespuesta(evento) {
+            if (evento.target.readyState == 4 && evento.target.status == 200) {
+                var datos;
+                var elemento1;
+                var elemento2;
+
+                objetoRespuesta = JSON.parse(evento.target.responseText);
+                datos=objetoRespuesta[caja1.value];
+
+                for(var i=0 ;i<datos.length;i++){
+
+                    elemento1=document.createElement("option");
+                    elemento2=document.createTextNode(datos[i]);
+                    elemento1.appendChild(elemento2);
+
+                    caja2.appendChild(elemento1);
+
+                }
+
+
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<forms>
+    <table>
+        <tr>
+            <td>Comunidades</td>
+            <td>
+    <select id="uno">
+        <option>---Elija una opcion---</option>
+        <option>andalucia</option>
+        <option>aragon</option>
+        <option>asturias</option>
+        <option>baleares</option>
+        <option>canarias</option>
+        <option>cantabria</option>
+        <option>castilla la mancha</option>
+        <option>castilla y leon</option>
+        <option>cataluña</option>
+        <option>comunidad valenciana</option>
+        <option>extremadura</option>
+        <option>galicia</option>
+        <option>la rioja</option>
+        <option>madrid</option>
+        <option>navarra</option>
+    </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <select id="dos"></select>
+            </td>
+        </tr>
+        </table>
+    </forms>
+</body>
+</html>

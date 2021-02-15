@@ -1,0 +1,34 @@
+<html>
+<head>
+<SCRIPT language="JavaScript">
+<!--
+ function ver(opciones){
+ 	var ventana= window.open("","",'width= 340,height=150');
+	
+ 	var texto = "<html><head><title>Ventana Frutas"+"</title></head><body><h3>Ventana Frutas"+"</h3><textarea id='caja' value='caja'></textarea></body></html>";
+	ventana.document.write(texto);
+ 	for (i=0;i<opciones.FRUTA.length;i++){
+ 		if (opciones.FRUTA.options[i].selected){
+			ventana.document.getElementById('caja').value=ventana.document.getElementById('caja').value+opciones.FRUTA.options[i].value +'\n';
+ 			
+ 		}
+ 	}
+ 	ventana.document.close();
+ }
+//-->
+</SCRIPT>
+</head>
+<body>
+<form>
+<p><b>Frutas: </b>
+<select size="6" name="FRUTA" multiple>
+<option selected>Peras</option>
+<option>Naranjas</option>
+<option>Platanos</option>
+<option>Kiwis</option>
+<option>Melon</option>
+<option>Granada</option>
+</select></p>
+<input type="button" value="Ver seleccion" name="VER" onClick="ver(this.form)">
+</form>
+</body>

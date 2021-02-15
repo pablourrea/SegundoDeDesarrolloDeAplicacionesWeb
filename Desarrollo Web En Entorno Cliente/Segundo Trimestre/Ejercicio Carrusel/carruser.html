@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="actibartaimer()">
+    <div name="carruser">
+        <img id="img" src="imagenes/imagen1.jpg" width="200" height="200">
+
+    </div>
+    <script>
+        var contador = 1;
+
+        function actibartaimer() {
+            setInterval(cambiarImagen, 1000);
+        }
+
+        function cambiarImagen() {
+            document.getElementById("img").src = "imagenes/imagen" + contador + ".jpg"
+            contador++;
+            if (contador == 10) {
+                contador = 1;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

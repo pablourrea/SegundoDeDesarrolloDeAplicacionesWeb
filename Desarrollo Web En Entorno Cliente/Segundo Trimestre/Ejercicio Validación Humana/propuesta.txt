@@ -1,0 +1,1 @@
+Proponer el ejercicio de humano para que se realice con los métodos ByName y ByTag. Dos versiones

@@ -1,0 +1,42 @@
+--HECHO--
+1º Añadir la gestión de Usuarios (Administrador)
+El administrador puede ver la lista de usuarios, modificar usuarios,  borrar usuarios si no tiene pedidos pendientes, ver el importe total de los pedidos que ha realizado cada usuario, pendientes de entregar etc.
+
+--HECHO--
+2º Gestión de Usuarios (Usuario normal)
+Permitir que un usuario pueda cambiar sus datos (salvo el identificador).  En el caso del correo electrónico se puede cambiar pero no puede haber dos usuarios con el mismo valor.
+Incluir una dirección de envío habitual de los pedidos al dar de alta un usuario. Esta dirección se utilizará por defecto si el usuario no indica lo contrario al tramitar sus pedidos.
+
+--HECHO--
+3º Mejorar la gestión de categorías
+Permitir borrar categorías o cambiar su nombre. No se puede borrar una categoría si hay productos con esa categoría. Mostrar el total vendido por cada categoría y el valor actual en almacén.
+
+4º Gestión de Productos.
+Obtener más información de los productos, el total de ventas realizadas, producto más vendido, productos sin ventas, productos sin existencias.
+
+--HECHO--
+5º Productos en oferta.
+Incluir la posibilidad de definir productos en oferta, que visualmente se muestran destacados con alguna especie de marca o en una especie categoría especial, que incluyan algún tipo de rebajas o descuentos.
+
+6º Manejar el Stock de productos
+No se puede vender productos sin stock, no se puede anotar en la cesta ni se puede generar un pedido con ellos. Puede ocurrir que un producto esté en nuestra cesta pero al intentar generar el pedido no se pueda realizar porque otro cliente se ha adelantado. Anotar un producto en la cesta no implica decrementar inmediatamente el stock, solo se decrementa cuando hacemos el pedido.
+
+7º Incluir un sistema de paginación en la lista de productos.
+Muestra una lista con un número máximo de productos, permitiendo que el usuario pueda seleccionar ir al principio, final, página siguiente, página anterior. Se puede programar directamente o utilizar una extensión mediante composer que lo permita.
+
+8º Realizar una versión responsive.
+Esta versión debe permitir el uso amigable desde un terminal móvil. Actualmente en el diseño web para móvil es prioritario (mobile first)
+
+A MEDIAS
+9º Generar un PDF al tramitar el pedido.
+Generar un PDF cuando el administrador lo solicite sobre un pedido determinado, este PDF podría servir como un albarán de entrega de la mercancía. Utilizar una extensión para implementar esta funcionalidad.
+
+10º Mejorar la gestión de pedidos
+Mostrar en detalles la fecha del pedido y la fecha de entrega si ha sido enviado, mostrar en detalle el nombre del usuario. Dar la opción de cancelar el pedido si no ha sido enviado.
+Tramitar correctamente un pedido: si el pedido cambia a enviado, se debe descontar la cantidad del stock de los producto, sin no hay suficiente stock, indicar que no se puede tramitar el pedido y dejar el producto en el estado anterior.
+Evitar que un usuario pueda acceder a los pedidos de otros clientes.
+
+11º Incluir cualquier otra funcionalidad o mejora que se os ocurra previa consulta al profesor.
+
+--HECHO--
+12.- Subir a un hosting, indicando la URL al profesor (0.5)

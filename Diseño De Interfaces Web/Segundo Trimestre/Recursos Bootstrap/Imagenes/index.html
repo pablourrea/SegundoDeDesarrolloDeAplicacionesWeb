@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .columna {
+            margin-top: 20px;
+            background: whitesmoke;
+            border: 1px solid black;
+        }
+    </style>
+    <title>Flexbox con bootstrap</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row no-gutters">
+            <div class="col mt-3">
+                <img class="rounded img-thumbnail" width="400" src="img/m1.jpg" alt="">
+
+            </div>
+            <div class="col-12 columna">
+                <!--con img-fluid hacemos que la imagen se adapte al tamaño del contenedor padre-->
+                <img class="rounded img-thumbnail img-fluid" src="img/m2.jpg" alt="">
+
+            </div>
+            <div class="col-12 columna">
+
+                <img class="float-left rounded img-thumbnail" width="300" src="img/m2.jpg" alt="">
+                <img class="float-right rounded img-thumbnail" width="300" src="img/m4.jpg" alt="">
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <figure>
+                    <img class="rounded img-fluid" width="200" src="img/p3.jpg" alt="">
+
+                    <figcaption class="figure-caption">
+                        <p class="text-center">Lorem, ipsum dolor.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-2">
+                <figure>
+                    <img class="rounded img-fluid" width="200" src="img/p3.jpg" alt="">
+
+                    <figcaption class="figure-caption">
+                        <p class="text-center">Lorem, ipsum dolor.</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-2">
+                <figure>
+                    <img class="rounded img-fluid" width="200" src="img/p3.jpg" alt="">
+
+                    <figcaption class="figure-caption">
+                        <p class="text-center">Lorem, ipsum dolor.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

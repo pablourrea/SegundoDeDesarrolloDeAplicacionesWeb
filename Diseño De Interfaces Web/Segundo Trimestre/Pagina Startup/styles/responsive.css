@@ -1,0 +1,270 @@
+@media screen and (max-width: 1300px) {
+    /* INTRO RESPONSIVE STYLES */
+    /* GENERAL STYLES */
+    .food-grid {
+        margin: 5px;
+        grid-template-columns: auto auto auto;
+    }
+    /* RESPONSIVE NAVBAR */
+    .nav-link {
+        font-size: 20px;
+    }
+    .navbar-image {
+        height: 25px;
+    }
+    /* RESPONSIVE SLIDESHOW */
+    #comp-name-size {
+        font-size: 50px;
+    }
+    #slide-div-text {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /* INTRO RESPONSIVE STYLES */
+    /* RESPONSIVE GLOWING INTRO TEXT */
+    #intro-logo {
+        width: 250px;
+    }
+    #intro-text-title {
+        margin-top: 15px;
+        font-size: 90px;
+    }
+    #intro-text-description {
+        margin-top: -40px;
+        font-size: 40px;
+    }
+    /* RESPONSIVE INTRO BUTTONS */
+    #how-it-works-button-video {
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+    }
+    #how-it-works-button-video-close {
+        top: 10px;
+        right: 10px;
+        font-size: 40px;
+    }
+    #intro-button-spa,
+    #intro-button-eng {
+        margin-top: 50px;
+        font-size: 40px;
+    }
+    /* INTRO RESPONSIVE STYLES */
+    /* GENERAL STYLES */
+    .page-title {
+        font-size: 60px;
+    }
+    .food-grid {
+        margin: 5px;
+        grid-template-columns: auto auto;
+    }
+    /* RESPONSIVE NAVBAR */
+    .nav-link {
+        font-size: 10px;
+    }
+    .navbar-image {
+        height: 15px;
+    }
+    /* RESPONSIVE SLIDESHOW */
+    #comp-name-size {
+        font-size: 40px;
+    }
+    #slide-div-text {
+        font-size: 30px;
+    }
+    /* RESPONSIVE ABOUT */
+    .about-text {
+        font-size: 20px;
+    }
+    iframe {
+        width: 575px;
+    }
+    /* RESPONSIVE MENUS AND FOOD */
+    .menu-title {
+        font-size: 40px;
+    }
+    .food-image {
+        width: 200px;
+    }
+    .menu-description {
+        font-size: 20px;
+    }
+    /* RESPONSIVE CONTACT */
+    .flex-contact {
+        margin: 75px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .contact-media-icon-img {
+        width: 70px;
+    }
+    .footer-text {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    /* INTRO RESPONSIVE STYLES */
+    /* RESPONSIVE GLOWING INTRO TEXT */
+    #intro-logo {
+        margin-top: 100px;
+    }
+    #intro-text-title {
+        margin-top: 10px;
+        font-size: 50px;
+    }
+    #intro-text-description {
+        margin-top: -20px;
+        font-size: 20px;
+    }
+    #intro-language-to-eng,
+    #intro-language-to-spa {
+        font-size: 22px;
+    }
+    /* RESPONSIVE INTRO BUTTONS */
+    #how-it-works-button-video {
+        top: 5px;
+        right: 5px;
+        font-size: 25px;
+    }
+    #how-it-works-button-video-close {
+        top: 5px;
+        right: 5px;
+        font-size: 25px;
+    }
+    #intro-button-spa,
+    #intro-button-eng {
+        margin-top: 70px;
+        font-size: 20px;
+    }
+    /* INTRO RESPONSIVE STYLES */
+    /* GENERAL STYLES */
+    .page-title {
+        font-size: 60px;
+    }
+    /* RESPONSIVE NAVBAR */
+    .nav-link {
+        font-size: 10px;
+    }
+    .navbar-image {
+        height: 15px;
+    }
+    /* RESPONSIVE SLIDESHOW */
+    #comp-name-size {
+        font-size: 40px;
+    }
+    #slide-div-text {
+        font-size: 30px;
+    }
+    /* RESPONSIVE ABOUT */
+    .about-text {
+        font-size: 20px;
+    }
+    iframe {
+        width: 575px;
+    }
+    /* RESPONSIVE MENUS AND FOOD */
+    .menu-title {
+        font-size: 40px;
+    }
+    .food-image {
+        width: 300px;
+    }
+    .menu-description {
+        font-size: 20px;
+    }
+    /* RESPONSIVE CONTACT */
+    .flex-contact {
+        margin: 75px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .contact-media-icon-img {
+        width: 50px;
+    }
+    .footer-text {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    /* INTRO RESPONSIVE STYLES */
+    /* GENERAL STYLES */
+    .page-title {
+        font-size: 40px;
+    }
+    .content-div {
+        max-width: 575px;
+    }
+    .food-grid {
+        margin: 0px;
+    }
+    .food-grid {
+        margin: 5px;
+        grid-template-columns: auto auto;
+    }
+    .food-div {
+        margin: 1px;
+        border: 1px solid #1d951b;
+        width: 120px;
+        padding: 10px;
+    }
+    /* RESPONSIVE NAVBAR */
+    .nav-link {
+        font-size: 30px;
+        text-align: center;
+    }
+    #full-navbar {
+        display: none;
+    }
+    #small-navbar {
+        display: block;
+    }
+    .navbar-image {
+        height: 35px;
+    }
+    #hide-link {
+        display: block;
+    }
+    /* RESPONSIVE SLIDESHOW */
+    #home,
+    .slider,
+    #slide-div,
+    #slide-div-text,
+    #home div img,
+    .bx-wrapper,
+    .bx-controls-direction {
+        display: none;
+    }
+    /* RESPONSIVE ABOUT */
+    .about-text {
+        font-size: 20px;
+    }
+    iframe {
+        width: 300px;
+    }
+    /* RESPONSIVE MENUS AND FOOD */
+    .menu-title {
+        font-size: 20px;
+    }
+    .food-image {
+        width: 100px;
+    }
+    .menu-description {
+        font-size: 10px;
+    }
+    /* RESPONSIVE CONTACT */
+    .flex-contact {
+        margin: 75px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .contact-media-icon-img {
+        width: 40px;
+    }
+    .footer-text {
+        font-size: 20px;
+    }
+}

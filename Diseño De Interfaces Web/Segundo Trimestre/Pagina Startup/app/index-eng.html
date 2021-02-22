@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+ *
+ *      VERSION EN INGLES
+ *
+ *      INDEX HTML DEL PROYECTO
+ *      DISEÑADO POR PABLO URREA
+ *      PARA DISEÑO DE INTERFACES WEB
+ *      EN EL CURSO 2º DE DAW
+ *      EN EL AÑO 2021
+ * 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Vegebits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="../assets/img/logo.svg" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+
+<body>
+
+    <video autoplay muted loop class="fixed fullscreen" id="background-video"><source src="../assets/vid/introVid.mp4" type="video/mp4"></video>
+
+    <div class="fixed" id="background-div">
+        <button class="fixed no-button glowing-intro-text pottaone" id="how-it-works-button-video">How it works?</button>
+        <button class="fixed no-button glowing-intro-text pottaone" id="intro-language-to-spa">ESPAÑOL</button>
+        <img class="glowing-intro-text" id="intro-logo" src="../assets/img/logo.svg" alt="Logo Vegebits">
+        <h1 class="glowing-intro-text pottaone" id="intro-text-title">VEGEBITS</h1>
+        <h2 class="glowing-intro-text pottaone" id="intro-text-description">MEAT-FREE FOOD DELIVERY</h2>
+        <button class="green-button-glow pottaone" id="intro-button-eng" type="submit">REDISCOVER YOUR MEAL</button>
+    </div>
+
+    <div class="fixed fullscreen none" id="external-div-show-video">
+        <button class="fixed no-button glowing-intro-text-R pottaone" id="how-it-works-button-video-close">X</button>
+        <div id="internal-div-show-video">
+            <iframe width="1080" height="720" src="https://www.youtube.com/embed/2Iv54_Wg2Zo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- LOAD JQUERY ONLINE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- LOAD SCRIPTS -->
+    <script src="../scripts/scripts.js"></script>
+
+</body>
+
+</html>

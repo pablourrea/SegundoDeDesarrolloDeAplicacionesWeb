@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+ *
+ *      VERSION EN INGLES
+ *
+ *      INTRO-PAGE HTML DEL PROYECTO
+ *      DISEÑADO POR PABLO URREA
+ *      PARA DISEÑO DE INTERFACES WEB
+ *      EN EL CURSO 2º DE DAW
+ *      EN EL AÑO 2021
+ * 
+-->
+
+<head>
+    <!-- HEAD -->
+    <meta charset="utf-8">
+    <title>Vegebits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="../assets/img/logo.svg" />
+
+    <!-- ONLINE STYLES -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+
+    <!-- PRELOAD JQUERY ONLINE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- ONLINE PRELOAD SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- PRELOAD SCRIPTS -->
+    <script src="../scripts/scripts.js"></script>
+</head>
+
+<body>
+    <!-- SLIDESHOW -->
+    <div class="slider pottaone fixed" id="home">
+        <div>
+            <div id="slide-div">
+                <div id="slide-div-text">
+                    <h1 class="glowing-intro-text slide-div-text" id="comp-name-size">VEGEBITS</h1>
+                    BEST VEGETARIAN AND VEGAN MEALS, DIRECTLY TO YOUR HOME
+                </div>
+            </div>
+            <img src="../assets/img/slideshow/carrusel1.jpg" style="width:100%">
+        </div>
+
+        <div>
+            <div id="slide-div">
+                <div id="slide-div-text">
+                    <h1 class="glowing-intro-text slide-div-text" id="comp-name-size">VEGEBITS</h1>
+                    WE ADAPT TO YOUR PREFERENCES AND ALLERGIES
+                </div>
+            </div>
+            <img src="../assets/img/slideshow/carrusel2.jpg" style="width:100%">
+        </div>
+
+        <div>
+            <div id="slide-div">
+                <div id="slide-div-text">
+                    <h1 class="glowing-intro-text slide-div-text" id="comp-name-size">VEGEBITS</h1>
+                    WE USE 100% NATURAL FOODS OF SUSTAINABLE PRODUCTION
+                </div>
+            </div>
+            <img src="../assets/img/slideshow/carrusel3.jpg" style="width:100%">
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="fixed-navbar" id="full-navbar">
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center pottaone" style="padding-top: 0; padding-bottom: 0;">
+            <ul class="navbar-nav ">
+                <li class="nav-item ">
+                    <a class="nav-link " href="#home"> <img src="../assets/img/logo.svg" class="navbar-image" id="navbar-logo"></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menus">Menus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vege">Vegetarian Meals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vega">Vegan Meals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="intro-page-spa.html#home"><img src="../assets/img/languages/spain.svg" class="navbar-image"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="hide-link"><button class="btn btn-success" id="hide">...</button></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="fixed-navbar" id="small-navbar">
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center pottaone" style="padding-top: 0; padding-bottom: 0;">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="btn btn-success" id="show">...</button></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ABOUT DIV -->
+    <div class="content-div" id="about">
+        <div class="page-title pottaone">ABOUT US</div>
+        <div class="about-text pottaone">You will no longer have to walk the tedious way from your home to the closest restaurant, because from now on you can enjoy the best vegetarian and vegan meals directly on your sofa, comfortably and with a couple of clicks. We also offer solutions
+            for companies with group menus. Deliveries are offered in 30 minutes or less in the north of Madrid, and in 50 minutes or less throughout Madrid, depending on the distance to <b> our headquarters </b>:</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.094430517909!2d-3.699776584602351!3d40.47317587935862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422912c3f95711%3A0xfd6d0a1eb67bcfc!2sIES%20Tetuan!5e0!3m2!1sen!2ses!4v1613497718808!5m2!1sen!2ses"
+            width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+    <!-- MENU DIV -->
+    <div class="content-div" id="menus">
+        <div class="page-title pottaone">MENUS</div>
+        <div class="food-grid pottaone">
+            <div class="food-div"><b class="menu-title">MENU 1</b>
+                <p class="menu-description">VEGETARIAN DISH TO CHOOSE WITH WITH DRINK</p><br><br><br><a href="" class="order-button">10,95&#8364</a></div>
+            <div class="food-div"><b class="menu-title">MENU 2</b>
+                <p class="menu-description">VEGAN DISH TO CHOOSE WITH DRINK&nbsp; &nbsp; </p><br><br><br><a href="" class="order-button">10,95&#8364</a></div>
+            <div class="food-div"><b class="menu-title">MENU 3</b>
+                <p class="menu-description">VEGETARIAN DISH TO CHOOSE WITH WITH DRINK AND DESSERT</p><br><br><br><a href="" class="order-button">12,95&#8364</a></div>
+            <div class="food-div"><b class="menu-title">MENU 4</b>
+                <p class="menu-description">VEGAN DISH TO CHOOSE WITH WITH DRINK AND DESSERT</p><br><br><br><a href="" class="order-button">12,95&#8364</a></div>
+            <div class="food-div"><b class="menu-title">MENU 5</b>
+                <p class="menu-description">VEGETARIAN BURGER WITH CHIPS AND DRINK</p><br><br><br><a href="" class="order-button">11,95&#8364</a></div>
+            <div class="food-div"><b class="menu-title">MENU 6</b>
+                <p class="menu-description">VEGAN BURGER WITH CHIPS AND DRINK</p><br><br><br><br><br><a href="" class="order-button">11,95&#8364</a></div>
+            <div class="food-div"><b class="menu-title">MENU 7</b>
+                <p class="menu-description">TWO VEGETARIAN DISHES TO CHOOSE FROM WITH DRINK</p><br><br><br><a href="" class="order-button">15,95&#8364</a></div>
+            <div class="food-div"><b class="menu-title">MENU 8</b>
+                <p class="menu-description">TWO VEGAN DISHES TO CHOOSE FROM WITH DRINK</p><br><br><br><a href="" class="order-button">15,95&#8364</a></div>
+        </div>
+    </div>
+
+    <!-- VEGETARIAN FOOD DIV -->
+    <div class="content-div" id="vege">
+        <div class="page-title pottaone">VEGETARIAN MEALS</div>
+        <div class="food-grid pottaone">
+            <div class="food-div"><img class="food-image" src="../assets/img/vege-food/albondigas-berenjena-salsa-tomate.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>AUBERGINE MEATBALLS WITH TOMATO SAUCE</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vege-food/calabacines-rellenos.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>PUMPKINS STUFFED WITH VEGETABLES AND CHEESE</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vege-food/ensalada-esparragos-tomate-requeson-nueces.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>SALAD OF ASPARAGUS, CHEESE AND WALNUTS</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vege-food/ensalada-judias-verdes-arroz.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>BEAN SALAD, RICE AND MUSTARD AND HONEY SAUCE</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vege-food/hamburguesa-vegetal-queso.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>VEGETABLE BURGER WITH CHEESE</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vege-food/risotto-ligero-de-setas.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>LIGHT MUSHROOM RISOTTO</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vege-food/tallarines-con-esparragos-parmesano.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>PASTA WITH ASPARAGUS</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vege-food/tortilla-de-verduras.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>EGG AND VEGETABLE TORTILLA</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+        </div>
+    </div>
+
+    <!-- VEGAN FOOD DIV -->
+    <div class="content-div" id="vega">
+        <div class="page-title pottaone">VEGAN MEALS</div>
+        <div class="food-grid pottaone">
+            <div class="food-div"><img class="food-image" src="../assets/img/vega-food/alcachofas-rellenas-quinoa.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>ARTICHOKES WITH QUINOA</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vega-food/arroz-tofu-verduras.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>RICE WITH TOFU AND VEGETABLES</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vega-food/cuscus-brocoli-germinados.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>COUSCUS AND BROCCOLI SPROUTS</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vega-food/espaguetis-calabacin-con-pesto.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>PUMPKIN SPAGHETTI AND PESTO</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vega-food/espirales-setas-verduras.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>SPIRALS WITH VEGETABLES</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vega-food/hamburguesa-vegetariana-de-patata.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>POTATO BURGER</b></p><br><br><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vega-food/lasana-vegetal.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>LIGHT VEGETABLE LASAGNA</b></p><br><a href="" class="order-button">7,95&#8364</a><br></div>
+            <div class="food-div"><img class="food-image" src="../assets/img/vega-food/potaje-de-lentejas.jpg" alt="Vegetarian Food"><br>
+                <p class="menu-description"><b>LIGHT LENTIL STEW</b></p><br><br><br><a href="" class="order-button">7,95&#8364</a><br></div>
+        </div>
+    </div>
+
+    <!-- CONTACT DIV -->
+    <div class="content-div " id="contact">
+        <div class="page-title pottaone ">CONTACTO</div>
+        <div class="flex-contact ">
+            <div class="flex-contact-icon ">
+                <a href=" "><img class="contact-media-icon-img " src="../assets/img/media-icon/11960651061579681526.svg " alt="Social Media Icon "></a>
+            </div>
+            <div class="flex-contact-icon ">
+                <a href=" "><img class="contact-media-icon-img " src="../assets/img/media-icon/9772575471579681525.svg " alt="Social Media Icon "></a>
+            </div>
+            <div class="flex-contact-icon ">
+                <a href=" "><img class="contact-media-icon-img " src="../assets/img/media-icon/2323436101579681524.svg " alt="Social Media Icon "></a>
+            </div>
+            <div class="flex-contact-icon ">
+                <a href=" "><img class="contact-media-icon-img " src="../assets/img/media-icon/7609402931579681527.svg " alt="Social Media Icon "></a>
+            </div>
+            <div class="flex-contact-icon ">
+                <a href=" "><img class="contact-media-icon-img " src="../assets/img/media-icon/11598722741579681528.svg " alt="Social Media Icon "></a>
+            </div>
+            <div class="flex-contact-icon ">
+                <a href=" "><img class="contact-media-icon-img " src="../assets/img/media-icon/12950338241579681526.svg " alt="Social Media Icon "></a>
+            </div>
+            <div class="flex-contact-icon ">
+                <a href=" "><img class="contact-media-icon-img " src="../assets/img/media-icon/13791609911579681528.svg " alt="Social Media Icon "></a>
+            </div>
+            <div class="flex-contact-icon ">
+                <a href=" "><img class="contact-media-icon-img " src="../assets/img/media-icon/16952200091579681528.svg " alt="Social Media Icon "></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-div pottaone ">
+        <div class="footer-text ">VEGEBITS is a registered trademark &#169;
+            <span id="copyright">
+                <script>
+                    $('#copyright').text(new Date().getFullYear());
+                </script>
+            </span>
+        </div>
+    </div>
+
+</body>
+
+</html>

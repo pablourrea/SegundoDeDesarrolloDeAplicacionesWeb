@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .mike {
+            width: 100px;
+            height: 100px;
+            background: rgb(198, 235, 130);
+        }
+    </style>
+    <title>Elementos bloques - línea</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <div class="bg-success p-4 mb-4">Esto abarca el 100%</div>
+                <!--Ojo los tipo línea no padding......-->
+                <span class="bg-dark text-white d-inline-block p-4 mb-4"> Objeto tipo línea</span>
+                <span class="bg-dark text-white d-inline-block mb-4"> Objeto tipo línea</span>
+                <span class="bg-dark text-white d-inline-block mb-4"> Objeto tipo línea</span>
+                <div class="bg-success p-4 mb-4 d-inline-block">Esto abarca ahora solo su tamaño</div>
+            </div>
+
+
+
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <div class="bg-success clearfix">
+                    <div class="mike float-left"></div>
+
+                    <div class="mike float-right"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

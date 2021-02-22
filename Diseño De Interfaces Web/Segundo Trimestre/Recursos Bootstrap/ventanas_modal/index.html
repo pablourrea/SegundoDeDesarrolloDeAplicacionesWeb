@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Ventanas Modal</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#ventana1">Abrir Ventana</button>
+
+                <div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="ventana1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h5 class="modal-title">Mi primera ventana MODAL</h5>
+                                <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            </div>
+                            <div class="modal-body">
+                                <h2>Hola DAW</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus minus atque enim ipsa deserunt, ipsam necessitatibus obcaecati doloribus non dignissimos vel voluptatum voluptas delectus exercitationem corrupti voluptates
+                                    numquam perspiciatis commodi amet totam iusto fuga? Ratione voluptatibus molestias magnam incidunt earum?</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <button class="btn btn-success" data-toggle="modal" data-target="#ventana2">Abrir Ventana</button>
+
+                <div class="modal fade" id="ventana2" tabindex="-1" role="dialog" aria-labelledby="ventana2" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h5 class="modal-title">Mi segunda ventana MODAL - GRID</h5>
+                                <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, voluptate non quos at commodi quas culpa quo dolor reiciendis consequuntur, sunt suscipit dolorum illo? Non minus officia odit delectus reprehenderit,
+                                                vel porro, itaque eveniet inventore fugiat ratione ullam! Neque, voluptates!S</p>
+
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, voluptate non quos at commodi quas culpa quo dolor reiciendis consequuntur, sunt suscipit dolorum illo? Non minus officia odit delectus reprehenderit,
+                                                vel porro, itaque eveniet inventore fugiat ratione ullam! Neque, voluptates!S</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger">Aceptar</button>
+                                <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="js/jquery-3.5.1.min.js "></script>
+        <script src="js/popper.min.js "></script>
+        <script src="js/bootstrap.min.js "></script>
+</body>
+
+</html>

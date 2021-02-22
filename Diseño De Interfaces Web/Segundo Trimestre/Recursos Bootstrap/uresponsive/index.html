@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Utilidades Responsive</title>
+    <style>
+        .columna {
+            background: rgb(12, 94, 94);
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col columna d-block d-sm-none ">
+                Tamaño Extra Pequeño
+            </div>
+            <div class="col columna d-none d-sm-block d-md-none">
+                Tamaño Pequeño
+            </div>
+            <div class="col columna d-none d-md-block d-lg-none">
+                Tamaño Medio
+            </div>
+            <div class="col columna d-none d-lg-block d-xl-none">
+                Tamaño Grande
+            </div>
+            <div class="col columna d-none d-xl-block">
+                Tamaño Super Grande
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

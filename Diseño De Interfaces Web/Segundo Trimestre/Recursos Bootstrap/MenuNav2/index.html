@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <title>Menús navegación</title>
+</head>
+<!--Ojo a navbar-expand-lg / fixed-top /fixed-button/ 60px / probar a meterlo en un contenedor-->
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="" class="navbar-brand">Home</a>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menumike" aria-controls="menumike" aria-expanded="false" aria-label="Menu Superior"> 
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menumike">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Nosotros</a>
+                </li>
+
+
+                <li class="nav-item dropdown">
+
+
+                    <a href="#" class="nav-link dropdown-toggle" id="partners" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nuestros colaboradores</a>
+                    <div class="dropdown-menu" aria-labelledby="partners">
+                        <a href="" class="dropdown-item">Indra</a>
+                        <a href="" class="dropdown-item">Microsoft</a>
+                        <a href="" class="dropdown-item">Accenture</a>
+                    </div>
+
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Formación</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Experiencias</a>
+                </li>
+            </ul>
+            <form action="" class="form-inline my-2 my-lg-0">
+                <input type="text" class="form-control mr-sm-2" placeholder="Búsqueda" aria-label="Buscar">
+                <button class="btn btn-dark my-2 my-sm-0">Buscar</button>
+
+            </form>
+        </div>
+
+    </nav>
+
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

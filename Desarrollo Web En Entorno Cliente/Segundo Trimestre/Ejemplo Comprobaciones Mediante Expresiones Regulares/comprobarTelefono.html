@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Usando expresiones regulares</title>
+</head>
+
+<body>
+    <input type='text' id='campo'>
+    <input type='button' onclick='validar()'>
+    <script>
+        function validar() {
+            valor = document.getElementById("campo").value;
+            if (!(/^\d{9}$/.test(valor))) {
+                //return false;
+                alert('false')
+            } else {
+                alert('true');
+            }
+        }
+    </script>
+</body>
+
+</html>

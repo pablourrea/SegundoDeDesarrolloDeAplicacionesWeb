@@ -1,0 +1,28 @@
+<!-- Ejemplo:Validar e-mail-->
+<HTML>
+
+<HEAD>
+    <TITLE>Ejemplo de JavaScript</TITLE>
+</HEAD>
+
+<BODY>
+    <SCRIPT LANGUAGE="JavaScript">
+        {
+            function validarEmail(valor) {
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(valor)) {
+                    alert("La direccion de email " + valor + " es correcta.");
+                    return (true);
+                } else {
+                    alert("La direccion de email es incorrecta.");
+                    return (false);
+                }
+            }
+        }
+    </SCRIPT>
+    <FORM>
+        <input type="text" name="email" size="50" style="font-family:verdana; font-size:12px;">
+        <input type="button" value="Validar e-mail" style="font-family:verdana; font-size:12px;" onClick="validarEmail(this.form.email.value);">
+    </FORM>
+</BODY>
+
+</html>

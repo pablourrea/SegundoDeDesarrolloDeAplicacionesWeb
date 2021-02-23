@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Usando expresiones regulares</title>
+</head>
+
+<body>
+    <input type='text' id='campo'>
+    <input type='button' onclick='validar()'>
+    <script>
+        function validar() {
+            valor = document.getElementById("campo").value;
+            if (!(/^\d{8}[A-Z]$/.test(valor))) {
+                //tambien puede valer /^\d{8}\D$/ pero es mas 
+                //restrictiva la primera.
+                //return false;
+                alert('false')
+            } else {
+                alert('true');
+            }
+        }
+    </script>
+</body>
+
+</html>

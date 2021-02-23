@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Eje1 uso checkbox, botones y textbox </title>
+</head>
+<body>
+<CENTER>
+<form name="CONTROLES">
+<a>DATOS DEL PEDIDO</a>
+<p><b>Nombre y Apellidos:</b>
+<input type="textbox" name="nombre">
+<p><b>Forma de pago:</b><b>
+<input type="radio" name="GRUPORADIO" value="Mensual"></b>Mensual
+<input type="radio" name="GRUPORADIO" value="Trimestral">Trimestral
+<input type="radio" name="GRUPORADIO" value="Anual">Anual
+</p>
+<p><b>Accesorios</b><b>: 
+<input type="checkbox" name="AIRE" value="Aire Acondicionado"></b>Aire Acondicionado 
+<input type="checkbox" name="ELEVALUNAS" value="Elevalunas Eléctrico">Elevalunas Eléctrico
+<input type="checkbox" name="RADIO" value="RadioCD">RadioCD
+</p> 
+<input type="button" value="Calcular" name="Calcular" onClick="Calculo()"> 
+<b>TOTAL:</b> <input type="text" name="TOTAL" size="10" value=0 READONLY>Euros
+<input type="button" value="Ver selecciones" name="VER" onClick="VerSeleccion()">
+</form>
+</CENTER>
+</body>
+</html> 

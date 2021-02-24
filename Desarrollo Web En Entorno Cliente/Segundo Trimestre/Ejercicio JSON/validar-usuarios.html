@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<head>
+<style>
+* {
+    -webkit-box-sizing:border-box; 
+    -moz-box-sizing:border-box;     
+    box-sizing:border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #302231;
+    font-family: helvetica;
+}
+
+article {
+    margin: 15% auto;
+    width: 20%;
+}
+
+input {
+    width: 100%;
+    margin-top: 1em; 
+    padding: .5em;
+    color: #38282C;
+    text-align: center;
+    background-color: #CCCEC4;
+    border: 0;
+    border-radius: 3px;
+}
+
+.resp, .si, .no {
+    position: absolute;
+    margin-top: 1em; 
+    margin-left: 8px;
+    background: #d45252;
+    border-radius: 3px;
+    color: #CCCEC4;
+    padding: 1px 6px;
+    z-index: 999; 
+    display: none;
+}
+
+input:focus + .resp {
+    display: inline;
+}
+
+input:focus + .si {
+    display: inline;
+    background: #28921f;
+}
+
+input:focus + .no {
+    display: inline;
+}
+
+input[type=submit] {
+    background-color: rgba(0,0,0,.3);
+    text-transform: uppercase;
+    color: rgba(255,255,255,.5);
+}
+
+input:disabled {
+    opacity: .2;
+}
+</style>
+</head>
+<body>
+
+<article>
+    <form id="formulario">
+    	<input type="text" name="nombre" id="" onkeyup="x(this.value)" required autocomplete=off placeholder=nombre>
+    	<span class="resp"></span>
+    	<br>
+    	<input type="submit" value="enviar" id="enviar">
+    </form>
+</article>
+
+<script>
+var xhr = new XMLHttpRequest();
+
+function x(nombreacomprobar) {
+    var inputNombre = document.getElementById("nombre");
+    var enviar = document.getElementById("enviar");
+    var msg = document.getElementsByClassName("resp")[0];
+
+    xhr.open("GET", "usuarios.json", true);
+    
+    xhr.onload = function() {
+        usuarios = JSON.parse(this.responseText);
+	alert(usuarios);
+	//usuario["Jesus"]
+        if(usuarios[nombreacomprobar]) {
+            msg.className = "resp no"
+            msg.textContent = "ya existe ese usuario";
+            enviar.disabled = true;
+        } else {
+            msg.className = "resp si"
+            msg.textContent = "usuario valido";
+            enviar.disabled = false;
+        }
+    };
+    xhr.send();
+}
+</script>
+
+</body>
+</html>

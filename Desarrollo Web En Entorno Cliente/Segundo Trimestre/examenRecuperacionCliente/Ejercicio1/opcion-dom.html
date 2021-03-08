@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>||Trabajando con elementos||</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <center id="centro">
+        <div id="div1">El texto superior se va a crear dinámicamente.<br><br>
+            <label>Cuenta atrás:  </label><input type="text" value="" style="height:35px;width:25px;font-size:24pt;">
+        </div>
+    </center>
+
+    <script>
+        //Variables de contador
+        var inter;
+        var cont = 5;
+
+        //Variables de acceso a DOM
+        var div1 = document.getElementById("div1");
+        var centro = document.getElementById("centro");
+        var time = document.getElementsByTagName("input")[0];
+
+        //Llamada a la funcion (Solo usar en el caso de eliminar el oyente de evento)
+        //cuentaAtras();
+
+        //Funcion
+        function cuentaAtras() {
+            //Funcion interval que se repite cada 2 segundos
+            inter = setInterval(function() {
+
+                //Establece el contenido de la caja con el valor del contador 
+                time.value = cont;
+
+                //Si el contador es 0, genera el texto y lo inserta antes del elemento con id "div1" y para la cuenta
+                if (cont == 0) {
+                    var div0 = document.createElement("div");
+                    div0.innerText = "Hola! ¿Qué tal?"
+                    centro.insertBefore(div0, div1);
+
+                    clearInterval(inter);
+                }
+
+                //Si el intervalo no se ha parado, a la variable contador se le resta 1
+                cont--;
+            }, 2000, "JavaScript");
+        }
+
+        //Oyente de evento que llama a la función
+        document.addEventListener("DOMContentLoaded", cuentaAtras, false);
+    </script>
+
+</body>
+
+</html>

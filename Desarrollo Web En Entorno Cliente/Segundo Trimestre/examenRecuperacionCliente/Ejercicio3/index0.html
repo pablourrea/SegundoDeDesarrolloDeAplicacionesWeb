@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <form action="javascript:void(0);">
+        <label> Buscar empleado por legajo: </label>
+        <input type="text" name="legajo" id="legajo" />
+        <input type="submit" id="boton_buscar_legajo" />
+        <div id="respuesta"></div>
+    </form>
+
+    <script>
+        //Variables del DOM
+        var inputTxt = document.getElementById("legajo");
+        var submitButton = document.getElementById("boton_buscar_legajo");
+
+        //Se añade el oyente de click al boton de submit para que llame a la funcion
+        submitButton.addEventListener("click", peticionAjax);
+
+        //Funcion de peticion AJAX
+        function peticionAjax() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                //Si se establece correctamente la conexion, escribe la respuesta en el div de respuesta
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("respuesta").innerHTML = this.responseText;
+                }
+            };
+
+            //Abre el archivo del servidor con metodo POST, configura la cabecera y envia los datos
+            xhttp.open("POST", "legajos.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("legajo=" + inputTxt.value);
+        }
+    </script>
+</body>
+
+</html>

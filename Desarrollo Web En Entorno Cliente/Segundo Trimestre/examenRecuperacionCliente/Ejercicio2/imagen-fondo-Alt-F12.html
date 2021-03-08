@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Entendiendo propagaci�n de eventos</title>
+
+    <style>
+        #imagen {
+            background-color: black;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+    <body>
+        <div id="imagen">
+            <h1>Pulsa <kbd>Alt + F12</kbd> para cambiar la imagen de fondo</h1>
+        </div>
+
+        <script>
+            //Variables del DOM
+            var img = document.getElementById("imagen");
+
+            //Añademe el evento keypress al documento
+            document.addEventListener("keyup", detectaTecla());
+
+            //Añade una imagen inicial de fondo
+            img.style.backgroundImage = "url('https://source.unsplash.com/random')";
+
+            //Funcion que cambia el fondo al ser llamado
+            function detectaTecla() {
+                var tecla = evObject.keyCode;
+                console.log("Funciona!");
+                if (tecla == 123) {
+                    //Cambia el fondo
+                    img.style.backgroundImage = "url('https://source.unsplash.com/random')";
+                }
+            }
+        </script>
+    </body>
+
+</html>
